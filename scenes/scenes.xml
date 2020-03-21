@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scenes>
+    <scene desc="" format="4.0.2" id="0" name="Game"/>
+    <scene desc="" format="4.0.2" id="1" name="Title"/>
+    <scene desc="" format="4.0.2" id="2" name="Tutorial"/>
+    <scene desc="" format="4.0.2" id="3" name="Score"/>
+</scenes>

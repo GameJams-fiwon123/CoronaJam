@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <event-mouse-enter-exit-region comment="false" x="219" y="170">
+            <group eventID="1" id="-1">
+                <set-frame comment="false" x="230" y="197">
+                    <ACTOR eid="var" id="0" vid="1"/>
+                    <int id="1" val="1"/>
+                </set-frame>
+            </group>
+            <REGION eid="this" id="0"/>
+            <int id="1" val="0"/>
+        </event-mouse-enter-exit-region>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

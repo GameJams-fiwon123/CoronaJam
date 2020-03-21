@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="14" y="32">
+            <group eventID="1" id="-1">
+                <if comment="false" x="25" y="57">
+                    <group eventID="1" id="-1">
+                        <set-frame comment="false" x="36" y="110">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </set-frame>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <int id="1" val="0"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </scene-wh>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <int id="1" val="0"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <scene-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                    </scene-wh>
+                                    <int id="1" val="2"/>
+                                </div>
+                            </lesseq>
+                        </and>
+                    </and>
+                </if>
+                <else-if comment="false" x="25" y="149">
+                    <group eventID="1" id="-1">
+                        <set-frame comment="false" x="36" y="202">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </set-frame>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <scene-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </scene-wh>
+                                    <int id="1" val="2"/>
+                                </div>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </scene-wh>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <int id="1" val="0"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </scene-wh>
+                            </lesseq>
+                        </and>
+                    </and>
+                </else-if>
+                <else-if comment="false" x="25" y="241">
+                    <group eventID="1" id="-1">
+                        <set-frame comment="false" x="36" y="294">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </set-frame>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <int id="1" val="0"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                </scene-wh>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <scene-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                    </scene-wh>
+                                    <int id="1" val="2"/>
+                                </div>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </scene-wh>
+                            </lesseq>
+                        </and>
+                    </and>
+                </else-if>
+                <else-if comment="false" x="25" y="333">
+                    <group eventID="1" id="-1">
+                        <set-frame comment="false" x="36" y="386">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </set-frame>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <int id="1" val="0"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </mousexy>
+                                <div comment="false" id="1" x="0" y="0">
+                                    <scene-wh comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                    </scene-wh>
+                                    <int id="1" val="2"/>
+                                </div>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <int id="1" val="0"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <mousexy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="1"/>
+                                </mousexy>
+                                <scene-wh comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="1"/>
+                                </scene-wh>
+                            </lesseq>
+                        </and>
+                    </and>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
