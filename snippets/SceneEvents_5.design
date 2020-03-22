@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="118" y="78">
+            <group eventID="1" id="-1">
+                <scene-change-through comment="false" x="129" y="103">
+                    <scene eid="4" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="2.5"/>
+                </scene-change-through>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

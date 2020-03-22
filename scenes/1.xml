@@ -2,12 +2,18 @@
 <scene depth="1" desc="" eventsnippetid="4" extheight="1144" extwidth="1144" extx="-32" exty="-32" format="4.0.2" gravx="-0.0" gravy="0.0" height="1080" id="1" name="Title" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="1080">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="TitleBack" opacity="100" order="1" rid="19" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
     <regions/>
     <terrainRegions/>
-    <actors/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="21" name="Iniciar 1" order="0" sx="1.0" sy="1.0" x="590" y="83" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="23" name="TutorialButton 2" order="1" sx="1.0" sy="1.0" x="83" y="271" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="25" name="SairButton 3" order="2" sx="1.0" sy="1.0" x="785" y="523" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="27" name="CreditosButton 4" order="3" sx="1.0" sy="1.0" x="165" y="845" z="0"/>
+    </actors>
     <snippets/>
     <terrain/>
     <atlases members="" retainAtlases="true"/>

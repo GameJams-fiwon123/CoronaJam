@@ -76,15 +76,6 @@ class ActorEvents_13 extends ActorScript
 	override public function init()
 	{
 		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(getLastCreatedRegion(), function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				_Player.setCurrentFrame(1);
-			}
-		});
-		
 	}
 	
 	override public function forwardMessage(msg:String)

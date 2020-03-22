@@ -8,8 +8,17 @@
         <layer blendMode="normal" color="64,64,64" id="3" locked="false" name="Player" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="0,255,0" id="2" locked="false" name="Mouse" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
-    <joints/>
-    <regions/>
+    <joints>
+        <STICK_JOINT a1="4" a2="1" collide="false" damping="0.0" freq="0.0" id="0" name="Stick Joint 0"/>
+        <STICK_JOINT a1="1" a2="4" collide="false" damping="0.0" freq="0.0" id="1" name="Stick Joint 1"/>
+        <STICK_JOINT a1="1" a2="4" collide="false" damping="0.0" freq="0.0" id="2" name="Stick Joint 2"/>
+    </joints>
+    <regions>
+        <region b="51" g="51" h="542" id="0" name="Region 0" pts="3,0.0,2.0,540.0,542.0,1080.0,0.0" r="51" type="poly" w="1080" x="0" y="0"/>
+        <region b="64" g="64" h="1079" id="1" name="Region 1" pts="3,540.0,541.0,1078.0,1079.0,1079.0,0.0" r="64" type="poly" w="539" x="540" y="0"/>
+        <region b="64" g="64" h="540" id="2" name="Region 2" pts="4,0.0,1078.0,540.0,541.0,1077.0,1078.0,0.0,1081.0" r="64" type="poly" w="1077" x="0" y="541"/>
+        <region b="64" g="64" h="1076" id="3" name="Region 3" pts="3,0.0,0.0,540.0,538.0,0.0,1076.0" r="64" type="poly" w="540" x="0" y="0"/>
+    </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="1" name="House 1" order="0" sx="1.0" sy="1.0" x="482" y="461" z="0"/>
@@ -21,8 +30,49 @@
                 </s>
             </snippets>
         </actor>
-        <actor a="0.0" aid="3" c="false" group="3" id="6" name="Player 3" order="0" sx="1.0" sy="1.0" x="514" y="443" z="3"/>
-        <actor a="0.0" aid="4" c="false" group="3" id="13" name="UpCollision 4" order="0" sx="1.0" sy="1.0" x="0" y="0" z="4"/>
+        <actor a="0.0" aid="3" c="true" group="0" id="6" name="Player 3" order="0" sx="1.0" sy="1.0" x="514" y="443" z="3">
+            <snippets>
+                <s enabled="true" id="9"/>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="4" c="true" group="-2" id="13" name="UpCollision 4" order="0" sx="1.0" sy="1.0" x="0" y="0" z="4">
+            <snippets>
+                <s enabled="true" id="10">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="1" list="0" val="3"/>
+                    <prop id="2" list="0" val="Right"/>
+                    <prop id="3" list="0" val=""/>
+                    <prop id="4" list="0" val=""/>
+                    <prop id="5" list="0" val=""/>
+                    <prop id="6" list="0" val="-1"/>
+                    <prop id="7" list="0" val="-1"/>
+                    <prop id="8" list="0" val="-1"/>
+                    <prop id="9" list="0" val="-1"/>
+                </s>
+                <s enabled="true" id="11">
+                    <prop id="1" list="0" val=""/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="5" c="true" group="-2" id="13" name="RegionDetect 5" order="1" sx="1.0" sy="1.0" x="0" y="0" z="4">
+            <snippets>
+                <s enabled="true" id="10">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="1" list="0" val="3"/>
+                    <prop id="2" list="0" val="Up"/>
+                    <prop id="3" list="0" val="Right"/>
+                    <prop id="4" list="0" val="Down"/>
+                    <prop id="5" list="0" val="Left"/>
+                    <prop id="6" list="0" val="0"/>
+                    <prop id="7" list="0" val="1"/>
+                    <prop id="8" list="0" val="2"/>
+                    <prop id="9" list="0" val="3"/>
+                </s>
+                <s enabled="true" id="11">
+                    <prop id="1" list="0" val=""/>
+                </s>
+            </snippets>
+        </actor>
     </actors>
     <snippets>
         <s enabled="true" id="7"/>

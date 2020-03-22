@@ -2,7 +2,8 @@
 <scene depth="1" desc="" eventsnippetid="5" extheight="1144" extwidth="1144" extx="-32" exty="-32" format="4.0.2" gravx="-0.0" gravy="0.0" height="1080" id="2" name="Tutorial" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="1080">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
-        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="TutorialBack" opacity="100" order="0" rid="15" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
     <regions/>

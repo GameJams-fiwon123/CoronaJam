@@ -63,39 +63,73 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class Design_10_10_PlayerFollowMouse extends ActorScript
 {
+	public var _Player:Actor;
+	public var _Up:String;
+	public var _Right:String;
+	public var _Down:String;
+	public var _Left:String;
+	public var _RegionUp:Region;
+	public var _RegionRight:Region;
+	public var _RegionDown:Region;
+	public var _RegionLeft:Region;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
+		nameMap.set("Player", "_Player");
+		nameMap.set("Up", "_Up");
+		_Up = "";
+		nameMap.set("Right", "_Right");
+		_Right = "";
+		nameMap.set("Down", "_Down");
+		_Down = "";
+		nameMap.set("Left", "_Left");
+		_Left = "";
+		nameMap.set("RegionUp", "_RegionUp");
+		nameMap.set("RegionRight", "_RegionRight");
+		nameMap.set("RegionDown", "_RegionDown");
+		nameMap.set("RegionLeft", "_RegionLeft");
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_RegionUp, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && 1 == mouseState)
 			{
-				if((((getMouseX() >= 0) && (getMouseX() <= getSceneWidth())) && ((getMouseY() >= 0) && (getMouseY() <= (getSceneHeight() / 2)))))
-				{
-					actor.setCurrentFrame(0);
-				}
-				else if((((getMouseX() >= (getSceneWidth() / 2)) && (getMouseX() <= getSceneWidth())) && ((getMouseY() >= 0) && (getMouseY() <= getSceneHeight()))))
-				{
-					actor.setCurrentFrame(1);
-				}
-				else if((((getMouseX() >= 0) && (getMouseX() <= getSceneWidth())) && ((getMouseY() >= (getSceneHeight() / 2)) && (getMouseY() <= getSceneHeight()))))
-				{
-					actor.setCurrentFrame(2);
-				}
-				else if((((getMouseX() >= 0) && (getMouseX() <= (getSceneWidth() / 2))) && ((getMouseY() >= 0) && (getMouseY() <= getSceneHeight()))))
-				{
-					actor.setCurrentFrame(3);
-				}
+				_Player.setAnimation(_Up);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_RegionRight, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				_Player.setAnimation(_Right);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_RegionDown, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				_Player.setAnimation(_Down);
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_RegionLeft, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				_Player.setAnimation(_Left);
 			}
 		});
 		

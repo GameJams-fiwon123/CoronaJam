@@ -4,4 +4,8 @@
     <scene desc="" format="4.0.2" id="1" name="Title"/>
     <scene desc="" format="4.0.2" id="2" name="Tutorial"/>
     <scene desc="" format="4.0.2" id="3" name="Score"/>
+    <scene desc="" format="4.0.2" id="4" name="SplashScreen"/>
+    <scene desc="" format="4.0.2" id="5" name="AppGame"/>
+    <scene desc="" format="4.0.2" id="6" name="GameOver"/>
+    <scene desc="" format="4.0.2" id="7" name="Credits"/>
 </scenes>
