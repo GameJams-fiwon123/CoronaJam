@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="2" id="0">
+        <event-mouse-enter-exit-actor comment="false" x="88" y="161">
+            <group eventID="2" id="-1">
+                <exit-game comment="false" x="99" y="188"/>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="2"/>
+        </event-mouse-enter-exit-actor>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

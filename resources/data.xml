@@ -9,7 +9,7 @@
             <poly data="4,0,0,512,0,512,56,0,56" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="0" id="32" name="CreditsBack" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="0" xpf="1.0" ypf="1.0"/>
+    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="32" name="CreditsBack" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="31" name="GameOverBack" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="3" name="Ground" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="1" fixedrot="false" fric="0.2" gid="3" id="1" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="House" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="2" static="true">
