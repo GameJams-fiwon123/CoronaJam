@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <event-mouse-enter-exit-region comment="false" x="328" y="150">
+        <event-mouse-enter-exit-region comment="false" x="167" y="150">
             <group eventID="1" id="-1">
-                <setanim comment="false" x="339" y="177">
+                <setanim comment="false" x="178" y="177">
                     <ACTOR eid="var" id="0" vid="1"/>
                     <get-val-10-2 comment="false" id="1" x="0" y="0"/>
                 </setanim>
