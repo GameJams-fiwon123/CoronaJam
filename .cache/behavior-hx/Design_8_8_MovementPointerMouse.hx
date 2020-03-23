@@ -80,8 +80,8 @@ class Design_8_8_MovementPointerMouse extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				actor.setX(getMouseX());
-				actor.setY(getMouseY());
+				actor.setXCenter(getMouseX());
+				actor.setYCenter(getMouseY());
 			}
 		});
 		

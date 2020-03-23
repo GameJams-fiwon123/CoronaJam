@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="3" desc="" eventsnippetid="2" extheight="1144" extwidth="1144" extx="-32" exty="-32" format="4.0.2" gravx="-0.0" gravy="0.0" height="1080" id="0" name="Game" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="1080">
+<scene depth="5" desc="" eventsnippetid="2" extheight="1144" extwidth="1144" extx="-32" exty="-32" format="4.0.2" gravx="-0.0" gravy="0.0" height="1080" id="0" name="Game" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="1080">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
-        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Ground" opacity="100" order="3" rid="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="House" opacity="100" order="2" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="64,64,64" id="3" locked="false" name="Player" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Ground" opacity="100" order="5" rid="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="House" opacity="100" order="4" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="64,64,64" id="3" locked="false" name="Player" opacity="100" order="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="255,0,255" id="4" locked="false" name="UI" opacity="100" order="2" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="255,175,175" id="5" locked="false" name="FrontUI" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="0,255,0" id="2" locked="false" name="Mouse" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
     <regions>
         <region b="64" g="64" id="5" name="Region 5" r="64" rad="0.0" type="circle" x="557" y="216"/>
+        <region b="64" g="64" h="122" id="6" name="Region 6" pts="4,58.0,0.0,58.0,122.0,0.0,122.0,0.0,0.0" r="64" type="box" w="58" x="995" y="36"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -27,10 +30,24 @@
                 <s enabled="true" id="9"/>
             </snippets>
         </actor>
+        <actor a="0.0" aid="4" c="true" group="3" id="42" name="UI 4" order="0" sx="1.0" sy="1.0" x="992" y="33" z="4">
+            <snippets>
+                <s enabled="true" id="25"/>
+                <s enabled="true" id="28">
+                    <prop id="2147483647" list="0" val="thisactor"/>
+                    <prop id="1" list="0" val="6"/>
+                    <prop id="2" list="0" val="5"/>
+                    <prop id="3" list="0" val="2"/>
+                    <prop id="4" list="0" val="false"/>
+                    <prop id="5" list="0" val="6"/>
+                    <prop id="6" list="0" val="6"/>
+                </s>
+            </snippets>
+        </actor>
+        <actor a="0.0" aid="5" c="false" group="3" id="44" name="Jail 5" order="1" sx="1.0" sy="1.0" x="1010" y="106" z="5"/>
+        <actor a="0.0" aid="6" c="false" group="3" id="46" name="Water 6" order="0" sx="1.0" sy="1.0" x="1011" y="51" z="5"/>
     </actors>
-    <snippets>
-        <s enabled="true" id="7"/>
-    </snippets>
+    <snippets/>
     <terrain/>
     <atlases members="" retainAtlases="true"/>
 </scene>

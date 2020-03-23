@@ -6,7 +6,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="2" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="4" attachedevent="true" class="scripts.ActorEvents_4" classname="scripts.ActorEvents_4" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="3" name="ActorEvents_4" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
@@ -23,12 +25,6 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_3" classname="scripts.SceneEvents_3" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="6" name="SceneEvents_3" oid="-1" package="scripts." sceneid="3" shared="false" type="scene">
         <blocks/>
         <events/>
-    </snippet>
-    <snippet attachedevent="false" class="scripts.Design_7_7_GameManager" classname="scripts.Design_7_7_GameManager" desc="" description="" design="true" drawOrder="0" id="7" name="GameManager" oid="-1" package="scripts" shared="false" type="scene">
-        <blocks/>
-        <events>
-            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_8_8_MovementPointerMouse" classname="scripts.Design_8_8_MovementPointerMouse" desc="" description="" design="true" drawOrder="0" id="8" name="MovementPointerMouse" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
@@ -104,9 +100,7 @@
     </snippet>
     <snippet actorid="35" attachedevent="true" class="scripts.ActorEvents_35" classname="scripts.ActorEvents_35" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="21" name="ActorEvents_35" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events>
-            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
-        </events>
+        <events/>
     </snippet>
     <snippet actorid="37" attachedevent="true" class="scripts.ActorEvents_37" classname="scripts.ActorEvents_37" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="22" name="ActorEvents_37" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
@@ -122,6 +116,34 @@
         <blocks/>
         <events>
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="42" attachedevent="true" class="scripts.ActorEvents_42" classname="scripts.ActorEvents_42" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="25" name="ActorEvents_42" oid="-1" package="scripts." shared="false" type="actor">
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Water" hidden="false" id="1" name="_Water" order="0"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Jail" hidden="false" id="2" name="_Jail" order="1"/>
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="44" attachedevent="true" class="scripts.ActorEvents_44" classname="scripts.ActorEvents_44" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="26" name="ActorEvents_44" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="46" attachedevent="true" class="scripts.ActorEvents_46" classname="scripts.ActorEvents_46" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="27" name="ActorEvents_46" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_28_28_UIClicked" classname="scripts.Design_28_28_UIClicked" desc="" description="" design="true" drawOrder="0" id="28" name="UIClicked" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Water" hidden="false" id="1" name="_Water" order="1"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="Jail" hidden="false" id="2" name="_Jail" order="2"/>
+        <region default="" defaultValue="" desc="" dropdown="" fullname="UiRegion" hidden="false" id="5" name="_UiRegion" order="5"/>
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="7" repeats="true"/>
+            <event displayName="On Region" enabled="true" id="5" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
+            <event displayName="On Region" enabled="true" id="6" name="event-mouse-enter-exit-region" order="4" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="7" name="event-mouse-enter-exit-actor" order="8" repeats="true"/>
+            <event displayName="Created" enabled="true" id="8" name="init" order="9" repeats="true"/>
         </events>
     </snippet>
 </pack>

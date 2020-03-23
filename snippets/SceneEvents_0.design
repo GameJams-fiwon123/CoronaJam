@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="254" y="115">
+            <group eventID="1" id="-1">
+                <play-sound4 comment="false" x="265" y="140">
+                    <int id="0" val="1"/>
+                    <sound eid="41" id="1"/>
+                </play-sound4>
+                <mousedisp comment="false" x="265" y="167">
+                    <int id="0" val="0"/>
+                </mousedisp>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
