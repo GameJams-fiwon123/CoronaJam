@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="2" y="108">
+            <group eventID="1" id="-1">
+                <actors-of-type3 comment="false" x="13" y="133">
+                    <group eventID="1" id="-1">
+                        <set-val-29-1 comment="false" x="24" y="165">
+                            <actor-of-type comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-1>
+                    </group>
+                    <actortype eid="1" id="0"/>
+                </actors-of-type3>
+                <set-val-29-2 comment="false" x="13" y="209">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="1"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                    </minus>
+                </set-val-29-2>
+                <set-val-29-3 comment="false" x="13" y="247">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="var" id="0" vid="1"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                    </minus>
+                </set-val-29-3>
+                <push-shove comment="false" x="13" y="285">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-val-29-2 comment="false" id="2" x="0" y="0"/>
+                    <get-val-29-3 comment="false" id="3" x="0" y="0"/>
+                    <randomfloat comment="false" id="4" x="0" y="0">
+                        <int id="0" val="100"/>
+                        <int id="1" val="200"/>
+                    </randomfloat>
+                </push-shove>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
