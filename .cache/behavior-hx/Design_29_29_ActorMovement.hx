@@ -61,28 +61,38 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_21 extends ActorScript
+class Design_29_29_ActorMovement extends ActorScript
 {
+	public var _House:Actor;
+	public var _xResult:Float;
+	public var _yResult:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
+		nameMap.set("House", "_House");
+		nameMap.set("xResult", "_xResult");
+		_xResult = 0.0;
+		nameMap.set("yResult", "_yResult");
+		_yResult = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		for(actorOfType in getActorsOfType(getActorType(1)))
 		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				stopAllSounds();
-				setGameAttribute("isTitlePlaying", false);
+			if(actorOfType != null && !actorOfType.dead && !actorOfType.recycled){
+				_House = actorOfType;
 			}
-		});
+		}
+		_xResult = (_House.getXCenter() - actor.getXCenter());
+		_yResult = (_House.getYCenter() - actor.getYCenter());
+		actor.push(_xResult, _yResult, randomFloatBetween(100, 200));
 		
 	}
 	

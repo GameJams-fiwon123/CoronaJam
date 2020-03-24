@@ -43,6 +43,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import com.stencyl.graphics.shaders.BasicShader;
 import com.stencyl.graphics.shaders.GrayscaleShader;
@@ -61,28 +62,64 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_21 extends ActorScript
+class SceneEvents_0 extends SceneScript
 {
+	public var _posSpawn:Float;
+	public var _posSpawnY:Float;
+	public var _dirSpawn:Float;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
+		super();
+		nameMap.set("posSpawnX", "_posSpawn");
+		_posSpawn = 0.0;
+		nameMap.set("posSpawnY", "_posSpawnY");
+		_posSpawnY = 0.0;
+		nameMap.set("dirSpawn", "_dirSpawn");
+		_dirSpawn = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		loopSound(getSound(41));
+		hideCursor();
+		
+		/* ======================= Every N seconds ======================== */
+		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
 		{
-			if(wrapper.enabled && 3 == mouseState)
+			if(wrapper.enabled)
 			{
-				stopAllSounds();
-				setGameAttribute("isTitlePlaying", false);
+				_dirSpawn = randomInt(0, 3);
+				if((_dirSpawn == 0))
+				{
+					_posSpawn = randomInt(0, 1080);
+					_posSpawnY = 0;
+					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+				else if((_dirSpawn == 1))
+				{
+					_posSpawn = 1080;
+					_posSpawnY = randomInt(0, 1080);
+					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+				else if((_dirSpawn == 2))
+				{
+					_posSpawn = randomInt(0, 1080);
+					_posSpawnY = 1080;
+					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+				else if((_dirSpawn == 3))
+				{
+					_posSpawn = 0;
+					_posSpawnY = randomInt(0, 1080);
+					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
 			}
-		});
+		}, null);
 		
 	}
 	

@@ -61,26 +61,67 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_21 extends ActorScript
+class Design_28_28_UIClicked extends ActorScript
 {
+	public var _Water:Actor;
+	public var _Jail:Actor;
+	public var _UiRegion:Region;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
+		nameMap.set("Water", "_Water");
+		nameMap.set("Jail", "_Jail");
+		nameMap.set("UiRegion", "_UiRegion");
 		
 	}
 	
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		_Water.alpha = 100 / 100;
+		_Jail.alpha = 50 / 100;
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_UiRegion, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				hideTileLayer(engine.getLayerById(2));
+				showCursor();
+			}
+		});
+		
+		/* ========================== On Region =========================== */
+		addMouseOverActorListener(_UiRegion, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && -1 == mouseState)
+			{
+				showTileLayer(engine.getLayerById(2));
+				hideCursor();
+			}
+		});
+		
 		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		addMouseOverActorListener(_Jail, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				stopAllSounds();
-				setGameAttribute("isTitlePlaying", false);
+				_Water.alpha = 50 / 100;
+				_Jail.alpha = 100 / 100;
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(_Water, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				_Water.alpha = 100 / 100;
+				_Jail.alpha = 50 / 100;
 			}
 		});
 		
