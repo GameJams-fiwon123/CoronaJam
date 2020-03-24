@@ -89,7 +89,7 @@ class SceneEvents_0 extends SceneScript
 		hideCursor();
 		
 		/* ======================= Every N seconds ======================== */
-		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
+		runPeriodically(1000 * randomFloatBetween(1, 4), function(timeTask:TimedTask):Void
 		{
 			if(wrapper.enabled)
 			{
@@ -117,6 +117,39 @@ class SceneEvents_0 extends SceneScript
 					_posSpawn = 0;
 					_posSpawnY = randomInt(0, 1080);
 					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+			}
+		}, null);
+		
+		/* ======================= Every N seconds ======================== */
+		runPeriodically(1000 * randomFloatBetween(1, 4), function(timeTask:TimedTask):Void
+		{
+			if(wrapper.enabled)
+			{
+				_dirSpawn = randomInt(0, 3);
+				if((_dirSpawn == 0))
+				{
+					_posSpawn = randomInt(0, 1080);
+					_posSpawnY = 0;
+					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+				else if((_dirSpawn == 1))
+				{
+					_posSpawn = 1080;
+					_posSpawnY = randomInt(0, 1080);
+					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+				else if((_dirSpawn == 2))
+				{
+					_posSpawn = randomInt(0, 1080);
+					_posSpawnY = 1080;
+					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
+				}
+				else if((_dirSpawn == 3))
+				{
+					_posSpawn = 0;
+					_posSpawnY = randomInt(0, 1080);
+					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
 				}
 			}
 		}, null);
