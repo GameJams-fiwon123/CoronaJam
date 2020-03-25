@@ -250,6 +250,13 @@
                             <int id="0" val="0"/>
                             <sound eid="62" id="1"/>
                         </play-sound4>
+                        <set-game-att comment="false" x="37" y="183">
+                            <int id="0" val="jailPerson"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-game-att>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <get-val-32-1 comment="false" id="0" x="0" y="0"/>
@@ -260,9 +267,9 @@
                         </not>
                     </and>
                 </if>
-                <else-if comment="false" x="26" y="195">
+                <else-if comment="false" x="26" y="225">
                     <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="220">
+                        <play-sound4 comment="false" x="37" y="250">
                             <int id="0" val="0"/>
                             <sound eid="57" id="1"/>
                         </play-sound4>
@@ -271,9 +278,9 @@
                         <int id="0" val="isUsingWater"/>
                     </get-game-att>
                 </else-if>
-                <else comment="false" x="26" y="259">
+                <else comment="false" x="26" y="289">
                     <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="279">
+                        <play-sound4 comment="false" x="37" y="309">
                             <int id="0" val="0"/>
                             <sound eid="58" id="1"/>
                         </play-sound4>

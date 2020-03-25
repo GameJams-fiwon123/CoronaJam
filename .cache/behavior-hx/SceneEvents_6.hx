@@ -78,6 +78,15 @@ class SceneEvents_6 extends SceneScript
 		/* ======================== When Creating ========================= */
 		showCursor();
 		
+		/* ======================= After N seconds ======================== */
+		runLater(1000 * 5, function(timeTask:TimedTask):Void
+		{
+			if(wrapper.enabled)
+			{
+				switchScene(GameModel.get().scenes.get(3).getID(), createFadeOut(1.5, Utils.getColorRGB(0,0,0)), createFadeIn(1.5, Utils.getColorRGB(0,0,0)));
+			}
+		}, null);
+		
 	}
 	
 	override public function forwardMessage(msg:String)

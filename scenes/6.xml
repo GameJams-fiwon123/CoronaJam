@@ -8,10 +8,7 @@
     <joints/>
     <regions/>
     <terrainRegions/>
-    <actors>
-        <actor a="0.0" aid="2" c="false" group="3" id="39" name="RecomecarButton 2" order="0" sx="1.0" sy="1.0" x="260" y="863" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="37" name="MenuButton 3" order="1" sx="1.0" sy="1.0" x="410" y="982" z="0"/>
-    </actors>
+    <actors/>
     <snippets/>
     <terrain/>
     <atlases members="" retainAtlases="true"/>

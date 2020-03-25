@@ -161,6 +161,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 					_startQuarantine = true;
 					actor.setVelocity(0, 0);
 					playSound(getSound(62));
+					setGameAttribute("jailPerson", ((Engine.engine.getGameAttribute("jailPerson") : Float) + 1));
 				}
 				else if(((getGameAttribute("isUsingWater")) : Bool))
 				{

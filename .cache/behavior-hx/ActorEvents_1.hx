@@ -91,9 +91,19 @@ class ActorEvents_1 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(33), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				recycleActor(event.otherActor);
-				setGameAttribute("savePersons", ((Engine.engine.getGameAttribute("savePersons") : Float) + 1));
-				playSound(getSound(61));
+				if((event.otherActor.getValue("PersonBehavior", "_isInfected") : Bool))
+				{
+					recycleActor(event.otherActor);
+					stopAllSounds();
+					playSound(getSound(52));
+					switchScene(GameModel.get().scenes.get(6).getID(), createFadeOut(1, Utils.getColorRGB(0,0,0)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
+				}
+				else
+				{
+					recycleActor(event.otherActor);
+					setGameAttribute("savePersons", ((Engine.engine.getGameAttribute("savePersons") : Float) + 1));
+					playSound(getSound(61));
+				}
 			}
 		});
 		

@@ -75,6 +75,17 @@ class SceneEvents_3 extends SceneScript
 	override public function init()
 	{
 		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.drawString("" + (Engine.engine.getGameAttribute("savePersons") : Float), 540, 500);
+				g.drawString("" + (Engine.engine.getGameAttribute("coronaDie") : Float), 540, 535);
+				g.drawString("" + (Engine.engine.getGameAttribute("jailPerson") : Float), 540, 555);
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

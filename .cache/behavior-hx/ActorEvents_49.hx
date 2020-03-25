@@ -104,6 +104,7 @@ class ActorEvents_49 extends ActorScript
 					_startDie = true;
 					actor.setVelocity(0, 0);
 					playSound(getSound(56));
+					setGameAttribute("coronaDie", ((Engine.engine.getGameAttribute("coronaDie") : Float) + 1));
 				}
 				else
 				{

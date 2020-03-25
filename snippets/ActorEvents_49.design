@@ -46,14 +46,21 @@
                             <int id="0" val="0"/>
                             <sound eid="56" id="1"/>
                         </play-sound4>
+                        <set-game-att comment="false" x="37" y="173">
+                            <int id="0" val="coronaDie"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-game-att>
                     </group>
                     <get-game-att comment="false" id="0" x="0" y="0">
                         <int id="0" val="isUsingWater"/>
                     </get-game-att>
                 </if>
-                <else comment="false" x="26" y="185">
+                <else comment="false" x="26" y="215">
                     <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="205">
+                        <play-sound4 comment="false" x="37" y="235">
                             <int id="0" val="0"/>
                             <sound eid="58" id="1"/>
                         </play-sound4>
