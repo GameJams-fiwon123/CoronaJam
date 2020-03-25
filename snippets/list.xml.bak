@@ -172,19 +172,24 @@
         </events>
     </snippet>
     <snippet actorid="49" attachedevent="true" class="scripts.ActorEvents_49" classname="scripts.ActorEvents_49" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="31" name="ActorEvents_49" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="startDie" hidden="false" id="1" name="_startDie" order="0"/>
         <blocks/>
         <events>
             <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_32_32_PersonBehavior" classname="scripts.Design_32_32_PersonBehavior" desc="" description="" design="true" drawOrder="0" id="32" name="PersonBehavior" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isInfected" hidden="false" id="1" name="_isInfected" order="1"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="DiagonalSpeed" hidden="false" id="2" name="_DiagonalSpeed" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="startQuarantine" hidden="false" id="3" name="_startQuarantine" order="3"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="startDie" hidden="false" id="4" name="_startDie" order="4"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
         </events>
     </snippet>
 </pack>

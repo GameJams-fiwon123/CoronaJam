@@ -72,6 +72,7 @@
     </attcats>
     <props/>
     <attributes>
+        <boolean cid="-1" id="3" name="isUsingWater" save="true" value="true"/>
         <number cid="-1" id="2" name="jailPerson" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="isTitlePlaying" save="true" value="false"/>
         <number cid="-1" id="1" name="savePersons" save="true" value="0.0"/>
@@ -105,7 +106,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,3,4,6,15,16,18,19,21,23,25,27,29,31,32,33,35,37,39,41,42,44,46,48,49,51," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,3,4,6,15,16,18,19,21,23,25,27,29,31,32,33,35,37,39,41,42,44,46,48,49," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

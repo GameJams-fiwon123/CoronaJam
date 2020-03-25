@@ -11,6 +11,10 @@
                     <ACTOR eid="var" id="0" vid="2"/>
                     <int id="1" val="100"/>
                 </set-opacity>
+                <set-game-att comment="false" x="26" y="96">
+                    <int id="0" val="isUsingWater"/>
+                    <false comment="false" id="1" x="0" y="0"/>
+                </set-game-att>
             </group>
             <ACTOR eid="var" id="0" vid="2"/>
             <int id="1" val="2"/>
@@ -62,6 +66,10 @@
                     <ACTOR eid="var" id="0" vid="2"/>
                     <int id="1" val="50"/>
                 </set-opacity>
+                <set-game-att comment="false" x="26" y="96">
+                    <int id="0" val="isUsingWater"/>
+                    <true comment="false" id="1" x="0" y="0"/>
+                </set-game-att>
             </group>
             <ACTOR eid="var" id="0" vid="1"/>
             <int id="1" val="2"/>
