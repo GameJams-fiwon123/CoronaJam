@@ -15,6 +15,10 @@
                     <int id="0" val="isUsingWater"/>
                     <false comment="false" id="1" x="0" y="0"/>
                 </set-game-att>
+                <play-sound4 comment="false" x="26" y="121">
+                    <int id="0" val="0"/>
+                    <sound eid="55" id="1"/>
+                </play-sound4>
             </group>
             <ACTOR eid="var" id="0" vid="2"/>
             <int id="1" val="2"/>
@@ -70,6 +74,10 @@
                     <int id="0" val="isUsingWater"/>
                     <true comment="false" id="1" x="0" y="0"/>
                 </set-game-att>
+                <play-sound4 comment="false" x="26" y="121">
+                    <int id="0" val="0"/>
+                    <sound eid="54" id="1"/>
+                </play-sound4>
             </group>
             <ACTOR eid="var" id="0" vid="1"/>
             <int id="1" val="2"/>

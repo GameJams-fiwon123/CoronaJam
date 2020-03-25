@@ -176,8 +176,9 @@
         <blocks/>
         <events>
             <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
-            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="3" name="step" order="3" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="4" repeats="true"/>
+            <event displayName="Created" enabled="true" id="4" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_32_32_PersonBehavior" classname="scripts.Design_32_32_PersonBehavior" desc="" description="" design="true" drawOrder="0" id="32" name="PersonBehavior" oid="-1" package="scripts" shared="false" type="actor">
@@ -190,7 +191,13 @@
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName="On Actor" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
-            <event displayName="Actor - Type" enabled="true" id="3" name="event-collide-actortotype" order="4" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="3" name="event-collide-actortotype" order="5" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="67" attachedevent="true" class="scripts.ActorEvents_67" classname="scripts.ActorEvents_67" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="33" name="ActorEvents_67" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
         </events>
     </snippet>
 </pack>

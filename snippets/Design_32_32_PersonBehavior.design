@@ -246,6 +246,10 @@
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </setvel>
+                        <play-sound4 comment="false" x="37" y="156">
+                            <int id="0" val="0"/>
+                            <sound eid="62" id="1"/>
+                        </play-sound4>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <get-val-32-1 comment="false" id="0" x="0" y="0"/>
@@ -256,6 +260,25 @@
                         </not>
                     </and>
                 </if>
+                <else-if comment="false" x="26" y="195">
+                    <group eventID="2" id="-1">
+                        <play-sound4 comment="false" x="37" y="220">
+                            <int id="0" val="0"/>
+                            <sound eid="57" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <get-game-att comment="false" id="0" x="0" y="0">
+                        <int id="0" val="isUsingWater"/>
+                    </get-game-att>
+                </else-if>
+                <else comment="false" x="26" y="259">
+                    <group eventID="2" id="-1">
+                        <play-sound4 comment="false" x="37" y="279">
+                            <int id="0" val="0"/>
+                            <sound eid="58" id="1"/>
+                        </play-sound4>
+                    </group>
+                </else>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>
@@ -273,6 +296,10 @@
                             <int id="2" val="_isInfected"/>
                             <true comment="false" id="3" x="0" y="0"/>
                         </set-attribute>
+                        <play-sound4 comment="false" x="37" y="109">
+                            <int id="0" val="0"/>
+                            <sound eid="59" id="1"/>
+                        </play-sound4>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-val-32-3 comment="false" id="0" x="0" y="0"/>

@@ -61,26 +61,69 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_25 extends ActorScript
+class ActorEvents_49 extends ActorScript
 {
+	public var _startDie:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("startDie", "_startDie");
+		_startDie = false;
 		
 	}
 	
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		loopSound(getSound(60));
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(33), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if(!(_startDie))
+				{
+					event.otherActor.setValue("PersonBehavior", "_isInfected", true);
+					recycleActor(actor);
+				}
+			}
+		});
+		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				playSound(getSound(53));
-				exitGame();
+				if(((getGameAttribute("isUsingWater")) : Bool))
+				{
+					actor.setAnimation("Die");
+					_startDie = true;
+					actor.setVelocity(0, 0);
+					playSound(getSound(56));
+				}
+				else
+				{
+					playSound(getSound(58));
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(_startDie)
+				{
+					if(!(actor.isAnimationPlaying()))
+					{
+						recycleActor(actor);
+					}
+				}
 			}
 		});
 		

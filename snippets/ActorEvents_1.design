@@ -7,7 +7,11 @@
                     <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                 </die>
                 <stop-sounds comment="false" x="93" y="205"/>
-                <scene-change-color comment="false" x="93" y="225">
+                <play-sound4 comment="false" x="93" y="225">
+                    <int id="0" val="0"/>
+                    <sound eid="52" id="1"/>
+                </play-sound4>
+                <scene-change-color comment="false" x="93" y="252">
                     <scene eid="6" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
@@ -35,6 +39,10 @@
                         <int id="1" val="1"/>
                     </plus>
                 </set-game-att>
+                <play-sound4 comment="false" x="85" y="214">
+                    <int id="0" val="0"/>
+                    <sound eid="61" id="1"/>
+                </play-sound4>
             </group>
             <ACTOR eid="this" id="0"/>
             <actortype eid="33" id="1"/>

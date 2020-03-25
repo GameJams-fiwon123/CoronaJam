@@ -82,6 +82,7 @@ class Design_24_24_ButtonClick extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
+				playSound(getSound(53));
 				switchScene(_Chosen.getID(), createFadeOut(1, Utils.getColorRGB(0,0,0)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
 			}
 		});

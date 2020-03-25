@@ -61,7 +61,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_25 extends ActorScript
+class ActorEvents_67 extends ActorScript
 {
 	
 	
@@ -79,8 +79,14 @@ class ActorEvents_25 extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				playSound(getSound(53));
-				exitGame();
+				if(((getGameAttribute("isUsingWater")) : Bool))
+				{
+					playSound(getSound(57));
+				}
+				else
+				{
+					playSound(getSound(58));
+				}
 			}
 		});
 		

@@ -42,11 +42,23 @@
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </setvel>
+                        <play-sound4 comment="false" x="37" y="146">
+                            <int id="0" val="0"/>
+                            <sound eid="56" id="1"/>
+                        </play-sound4>
                     </group>
                     <get-game-att comment="false" id="0" x="0" y="0">
                         <int id="0" val="isUsingWater"/>
                     </get-game-att>
                 </if>
+                <else comment="false" x="26" y="185">
+                    <group eventID="2" id="-1">
+                        <play-sound4 comment="false" x="37" y="205">
+                            <int id="0" val="0"/>
+                            <sound eid="58" id="1"/>
+                        </play-sound4>
+                    </group>
+                </else>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>
@@ -77,4 +89,15 @@
         </step>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <play-sound4 comment="false" x="26" y="40">
+                    <int id="0" val="1"/>
+                    <sound eid="60" id="1"/>
+                </play-sound4>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>

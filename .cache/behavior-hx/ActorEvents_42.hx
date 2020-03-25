@@ -61,28 +61,22 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_25 extends ActorScript
+class ActorEvents_42 extends ActorScript
 {
+	public var _Water:Actor;
+	public var _Jail:Actor;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Water", "_Water");
+		nameMap.set("Jail", "_Jail");
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				playSound(getSound(53));
-				exitGame();
-			}
-		});
 		
 	}
 	

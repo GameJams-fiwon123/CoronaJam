@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="33" fixedrot="false" fric="0.2" gid="3" id="67" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Background" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="68" static="true">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="68" name="Background" readable="false" shared="false">
+        <anim across="1" down="1" durations="100" height="1080" id="0" loop="true" name="Animation 0" numframes="1" originx="540" originy="540" sync="false" version="2" width="1080">
+            <poly data="4,0,0,1080,0,1080,1080,0,1080" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        </anim>
+    </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="18" name="Black" numframes="1" oid="-1" readable="false" repeats="true" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
+    <music atlasID="0" desc="" id="55" loop="true" name="ClickGaiola" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="53" loop="true" name="ClickSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="54" loop="true" name="ClickWater" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="31" fixedrot="false" fric="0.2" gid="3" id="49" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Corona" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="50" static="false">
         <snippets>
             <s enabled="true" id="29">
@@ -33,7 +44,10 @@
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="32" name="CreditsBack" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
+    <music atlasID="0" desc="" id="56" loop="true" name="DieCoronaSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="61" loop="true" name="EnterHouseSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="31" name="GameOverBack" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
+    <music atlasID="0" desc="" id="52" loop="true" name="GameOverSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="41" loop="true" name="GameplayMusic" oid="-1" pan="0" shared="false" stream="true" type="mp3" volume="1"/>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="1080" id="3" name="Ground" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="1080" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="1" fixedrot="false" fric="0.2" gid="3" id="1" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="House" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="2" static="true">
@@ -65,6 +79,9 @@
             <poly data="4,0,0,28,0,28,36,0,36" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="62" loop="true" name="JailDoenteSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="60" loop="true" name="LoopCoronaSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="59" loop="true" name="LoopDoenteSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="22" fixedrot="false" fric="0.2" gid="3" id="37" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="MenuButton" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="38" static="false">
         <snippets>
             <s enabled="true" id="24">
@@ -78,6 +95,8 @@
             <poly data="4,0,0,254,0,254,55,0,55" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="58" loop="true" name="MissGradeSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="57" loop="true" name="MissWaterSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="3" fixedrot="true" fric="0.2" gid="3" id="4" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="MousePointer" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="5" static="false">
         <snippets>
             <s enabled="true" id="8">
@@ -96,6 +115,8 @@
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val="false"/>
                 <prop id="2" list="0" val="0"/>
+                <prop id="3" list="0" val="false"/>
+                <prop id="4" list="0" val="false"/>
             </s>
             <s enabled="true" id="29">
                 <prop id="2147483647" list="0" val="thisactor"/>
