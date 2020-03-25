@@ -51,21 +51,18 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_10_10_PlayerFollowMouse" classname="scripts.Design_10_10_PlayerFollowMouse" desc="" description="" design="true" drawOrder="0" id="10" name="PlayerFollowMouse" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <actor default="" defaultValue="" desc="" dropdown="" fullname="Player" hidden="false" id="1" name="_Player" order="1"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Up" hidden="false" id="2" name="_Up" order="2"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Right" hidden="false" id="3" name="_Right" order="3"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Down" hidden="false" id="4" name="_Down" order="4"/>
-        <text default="" defaultValue="" desc="" dropdown="" fullname="Left" hidden="false" id="5" name="_Left" order="5"/>
         <region default="" defaultValue="" desc="" dropdown="" fullname="RegionUp" hidden="false" id="6" name="_RegionUp" order="6"/>
         <region default="" defaultValue="" desc="" dropdown="" fullname="RegionRight" hidden="false" id="7" name="_RegionRight" order="7"/>
         <region default="" defaultValue="" desc="" dropdown="" fullname="RegionDown" hidden="false" id="8" name="_RegionDown" order="8"/>
         <region default="" defaultValue="" desc="" dropdown="" fullname="RegionLeft" hidden="false" id="9" name="_RegionLeft" order="9"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="DiagonalSpeed" hidden="false" id="10" name="_DiagonalSpeed" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isInfected" hidden="false" id="11" name="_isInfected" order="11"/>
+        <actor default="" defaultValue="" desc="" dropdown="" fullname="House" hidden="false" id="12" name="_House" order="12"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="xResult" hidden="true" id="13" name="_xResult" order="13"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="yResult" hidden="true" id="14" name="_yResult" order="14"/>
         <blocks/>
         <events>
-            <event displayName="On Region" enabled="true" id="1" name="event-mouse-enter-exit-region" order="1" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="2" name="event-mouse-enter-exit-region" order="3" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="3" name="event-mouse-enter-exit-region" order="4" repeats="true"/>
-            <event displayName="On Region" enabled="true" id="4" name="event-mouse-enter-exit-region" order="5" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="5" name="step" order="6" repeats="false"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="12" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">

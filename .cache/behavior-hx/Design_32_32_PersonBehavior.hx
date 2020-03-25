@@ -76,7 +76,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 		nameMap.set("isInfected", "_isInfected");
 		_isInfected = false;
 		nameMap.set("DiagonalSpeed", "_DiagonalSpeed");
-		_DiagonalSpeed = 0;
+		_DiagonalSpeed = 0.0;
 		nameMap.set("startQuarantine", "_startQuarantine");
 		_startQuarantine = false;
 		nameMap.set("startDie", "_startDie");

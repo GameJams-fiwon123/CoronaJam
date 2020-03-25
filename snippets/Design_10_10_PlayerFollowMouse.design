@@ -1,55 +1,175 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
-        <event-mouse-enter-exit-region comment="false" x="167" y="150">
-            <group eventID="1" id="-1">
-                <setanim comment="false" x="178" y="177">
-                    <ACTOR eid="var" id="0" vid="1"/>
-                    <get-val-10-2 comment="false" id="1" x="0" y="0"/>
-                </setanim>
+    <group eventID="5" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-val-10-13 comment="false" x="26" y="40">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <mousexy comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </mousexy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="2"/>
+                        </get-xy>
+                    </minus>
+                </set-val-10-13>
+                <set-val-10-14 comment="false" x="26" y="78">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <mousexy comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="1"/>
+                        </mousexy>
+                        <get-xy comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="3"/>
+                        </get-xy>
+                    </minus>
+                </set-val-10-14>
+                <set-val-10-10 comment="false" x="26" y="116">
+                    <to-degreesradians comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <atan2 comment="false" id="1" x="0" y="0">
+                            <get-val-10-14 comment="false" id="0" x="0" y="0"/>
+                            <get-val-10-13 comment="false" id="1" x="0" y="0"/>
+                        </atan2>
+                    </to-degreesradians>
+                </set-val-10-10>
+                <if comment="false" x="26" y="159">
+                    <group eventID="5" id="-1">
+                        <setanim comment="false" x="37" y="204">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Right"/>
+                        </setanim>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-45"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="45"/>
+                            </lesseq>
+                        </and>
+                        <or comment="false" id="1" x="0" y="0">
+                            <and comment="false" id="0" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="315"/>
+                                </moreeq>
+                                <lesseq comment="false" id="1" x="0" y="0">
+                                    <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="360"/>
+                                </lesseq>
+                            </and>
+                            <and comment="false" id="1" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="-360"/>
+                                </moreeq>
+                                <lesseq comment="false" id="1" x="0" y="0">
+                                    <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="-315"/>
+                                </lesseq>
+                            </and>
+                        </or>
+                    </or>
+                </if>
+                <else-if comment="false" x="26" y="243">
+                    <group eventID="5" id="-1">
+                        <setanim comment="false" x="37" y="283">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Left"/>
+                        </setanim>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-225"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-135"/>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="135"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="225"/>
+                            </lesseq>
+                        </and>
+                    </or>
+                </else-if>
+                <else-if comment="false" x="26" y="322">
+                    <group eventID="5" id="-1">
+                        <setanim comment="false" x="37" y="362">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Up"/>
+                        </setanim>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-134"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-46"/>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="226"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="314"/>
+                            </lesseq>
+                        </and>
+                    </or>
+                </else-if>
+                <else-if comment="false" x="26" y="401">
+                    <group eventID="5" id="-1">
+                        <setanim comment="false" x="37" y="441">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Down"/>
+                        </setanim>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-314"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-226"/>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="46"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-10-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="134"/>
+                            </lesseq>
+                        </and>
+                    </or>
+                </else-if>
             </group>
-            <REGION eid="var" id="0" vid="6"/>
-            <int id="1" val="0"/>
-        </event-mouse-enter-exit-region>
+        </step>
     </group>
-    <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <event-mouse-enter-exit-region comment="false" x="224" y="173">
-            <group eventID="2" id="-1">
-                <setanim comment="false" x="235" y="200">
-                    <ACTOR eid="var" id="0" vid="1"/>
-                    <get-val-10-3 comment="false" id="1" x="0" y="0"/>
-                </setanim>
-            </group>
-            <REGION eid="var" id="0" vid="7"/>
-            <int id="1" val="0"/>
-        </event-mouse-enter-exit-region>
-    </group>
-    <group eventID="2" id="-1"/>
-    <group eventID="3" id="0">
-        <event-mouse-enter-exit-region comment="false" x="296" y="177">
-            <group eventID="3" id="-1">
-                <setanim comment="false" x="307" y="204">
-                    <ACTOR eid="var" id="0" vid="1"/>
-                    <get-val-10-4 comment="false" id="1" x="0" y="0"/>
-                </setanim>
-            </group>
-            <REGION eid="var" id="0" vid="8"/>
-            <int id="1" val="0"/>
-        </event-mouse-enter-exit-region>
-    </group>
-    <group eventID="3" id="-1"/>
-    <group eventID="4" id="0">
-        <event-mouse-enter-exit-region comment="false" x="15" y="15">
-            <group eventID="4" id="-1">
-                <setanim comment="false" x="26" y="42">
-                    <ACTOR eid="var" id="0" vid="1"/>
-                    <get-val-10-5 comment="false" id="1" x="0" y="0"/>
-                </setanim>
-            </group>
-            <REGION eid="var" id="0" vid="9"/>
-            <int id="1" val="0"/>
-        </event-mouse-enter-exit-region>
-    </group>
-    <group eventID="4" id="-1"/>
+    <group eventID="5" id="-1"/>
 </groups>

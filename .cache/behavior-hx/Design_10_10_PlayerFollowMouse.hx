@@ -63,73 +63,64 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class Design_10_10_PlayerFollowMouse extends ActorScript
 {
-	public var _Player:Actor;
-	public var _Up:String;
-	public var _Right:String;
-	public var _Down:String;
-	public var _Left:String;
 	public var _RegionUp:Region;
 	public var _RegionRight:Region;
 	public var _RegionDown:Region;
 	public var _RegionLeft:Region;
+	public var _DiagonalSpeed:Float;
+	public var _isInfected:Bool;
+	public var _House:Actor;
+	public var _xResult:Float;
+	public var _yResult:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
-		nameMap.set("Player", "_Player");
-		nameMap.set("Up", "_Up");
-		_Up = "";
-		nameMap.set("Right", "_Right");
-		_Right = "";
-		nameMap.set("Down", "_Down");
-		_Down = "";
-		nameMap.set("Left", "_Left");
-		_Left = "";
 		nameMap.set("RegionUp", "_RegionUp");
 		nameMap.set("RegionRight", "_RegionRight");
 		nameMap.set("RegionDown", "_RegionDown");
 		nameMap.set("RegionLeft", "_RegionLeft");
+		nameMap.set("DiagonalSpeed", "_DiagonalSpeed");
+		_DiagonalSpeed = 0.0;
+		nameMap.set("isInfected", "_isInfected");
+		_isInfected = false;
+		nameMap.set("House", "_House");
+		nameMap.set("xResult", "_xResult");
+		_xResult = 0.0;
+		nameMap.set("yResult", "_yResult");
+		_yResult = 0.0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(_RegionUp, function(mouseState:Int, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && 1 == mouseState)
+			if(wrapper.enabled)
 			{
-				_Player.setAnimation(_Up);
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(_RegionRight, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				_Player.setAnimation(_Right);
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(_RegionDown, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				_Player.setAnimation(_Down);
-			}
-		});
-		
-		/* ========================== On Region =========================== */
-		addMouseOverActorListener(_RegionLeft, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 1 == mouseState)
-			{
-				_Player.setAnimation(_Left);
+				_xResult = (getMouseX() - actor.getXCenter());
+				_yResult = (getMouseY() - actor.getYCenter());
+				_DiagonalSpeed = Utils.DEG * (Math.atan2(_yResult, _xResult));
+				if((((_DiagonalSpeed >= -45) && (_DiagonalSpeed <= 45)) || (((_DiagonalSpeed >= 315) && (_DiagonalSpeed <= 360)) || ((_DiagonalSpeed >= -360) && (_DiagonalSpeed <= -315)))))
+				{
+					actor.setAnimation("Right");
+				}
+				else if((((_DiagonalSpeed >= -225) && (_DiagonalSpeed <= -135)) || ((_DiagonalSpeed >= 135) && (_DiagonalSpeed <= 225))))
+				{
+					actor.setAnimation("Left");
+				}
+				else if((((_DiagonalSpeed >= -134) && (_DiagonalSpeed <= -46)) || ((_DiagonalSpeed >= 226) && (_DiagonalSpeed <= 314))))
+				{
+					actor.setAnimation("Up");
+				}
+				else if((((_DiagonalSpeed >= -314) && (_DiagonalSpeed <= -226)) || ((_DiagonalSpeed >= 46) && (_DiagonalSpeed <= 134))))
+				{
+					actor.setAnimation("Down");
+				}
 			}
 		});
 		

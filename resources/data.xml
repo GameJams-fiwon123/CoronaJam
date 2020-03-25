@@ -156,7 +156,19 @@
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="9" fixedrot="false" fric="0.2" gid="0" id="6" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Player" oid="-1" pausable="true" physicsMode="1" rest="0.0" shared="false" sprite="7" static="false">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="10">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="2" list="0" val=""/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val=""/>
+                <prop id="5" list="0" val=""/>
+                <prop id="10" list="0" val="0.0"/>
+                <prop id="11" list="0" val="false"/>
+                <prop id="13" list="0" val="0.0"/>
+                <prop id="14" list="0" val="0.0"/>
+            </s>
+        </snippets>
     </actor>
     <sprite atlasID="0" default="2" defaultAnimation="2" desc="" id="7" name="Player" readable="false" shared="false">
         <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Up" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">

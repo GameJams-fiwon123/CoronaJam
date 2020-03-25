@@ -3,10 +3,10 @@
     <keys androidAlias="" androidCert="" androidPassword="" androidPublicKey="" cpmID="" iosTeamID="" ioswhirlKey="" ioswhirlKey1="" ngID="" ngKey="" p12="" p12pwd="" prov-adhoc="" prov-store="" whirlKey="" whirlKey1=""/>
     <exts/>
     <bundles>
-        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Mac App Store" version="1.0.0"/>
-        <bundle author="" id="com.yourcompany.gamename" internalVersion="1" metroColor="-12566464" name="My Game" store="Windows Store" version="1.0.0"/>
-        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="App Store" version="1.0.0"/>
         <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Google Play" version="1.0.0"/>
+        <bundle author="" id="com.yourcompany.gamename" internalVersion="1" metroColor="-12566464" name="My Game" store="Windows Store" version="1.0.0"/>
+        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Mac App Store" version="1.0.0"/>
+        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="App Store" version="1.0.0"/>
     </bundles>
     <scales>
         <scale detailed="1x" id="0" name="1x" size="1.0"/>
@@ -73,7 +73,7 @@
     <props/>
     <attributes>
         <boolean cid="-1" id="3" name="isUsingWater" save="true" value="true"/>
-        <number cid="-1" id="4" name="coronaDie" save="true" value="0"/>
+        <number cid="-1" id="4" name="coronaDie" save="true" value="0.0"/>
         <number cid="-1" id="2" name="jailPerson" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="isTitlePlaying" save="true" value="false"/>
         <number cid="-1" id="1" name="savePersons" save="true" value="0.0"/>
