@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="9" y="7">
+            <group eventID="1" id="-1">
+                <set-val-32-2 comment="false" x="20" y="32">
+                    <to-degreesradians comment="false" id="0" x="0" y="0">
+                        <int id="0" val="0"/>
+                        <atan2 comment="false" id="1" x="0" y="0">
+                            <get-dxy comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="1"/>
+                            </get-dxy>
+                            <get-dxy comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                                <int id="1" val="0"/>
+                            </get-dxy>
+                        </atan2>
+                    </to-degreesradians>
+                </set-val-32-2>
+                <if comment="false" x="20" y="83">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="31" y="128">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="153">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="RightDoente"/>
+                                </setanim>
+                            </group>
+                            <get-val-32-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="31" y="192">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="212">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="RightSaudavel"/>
+                                </setanim>
+                            </group>
+                        </else>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-45"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="45"/>
+                            </lesseq>
+                        </and>
+                        <or comment="false" id="1" x="0" y="0">
+                            <and comment="false" id="0" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="315"/>
+                                </moreeq>
+                                <lesseq comment="false" id="1" x="0" y="0">
+                                    <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="360"/>
+                                </lesseq>
+                            </and>
+                            <and comment="false" id="1" x="0" y="0">
+                                <moreeq comment="false" id="0" x="0" y="0">
+                                    <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="-360"/>
+                                </moreeq>
+                                <lesseq comment="false" id="1" x="0" y="0">
+                                    <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="-315"/>
+                                </lesseq>
+                            </and>
+                        </or>
+                    </or>
+                </if>
+                <else-if comment="false" x="20" y="263">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="31" y="303">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="328">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="LeftDoente"/>
+                                </setanim>
+                            </group>
+                            <get-val-32-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="31" y="367">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="387">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="LeftSaudavel"/>
+                                </setanim>
+                            </group>
+                        </else>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-225"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-135"/>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="135"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="225"/>
+                            </lesseq>
+                        </and>
+                    </or>
+                </else-if>
+                <else-if comment="false" x="20" y="438">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="31" y="478">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="503">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="UpDoente"/>
+                                </setanim>
+                            </group>
+                            <get-val-32-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="31" y="542">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="562">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="UpSaudavel"/>
+                                </setanim>
+                            </group>
+                        </else>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-134"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-46"/>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="226"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="314"/>
+                            </lesseq>
+                        </and>
+                    </or>
+                </else-if>
+                <else-if comment="false" x="20" y="613">
+                    <group eventID="1" id="-1">
+                        <if comment="false" x="31" y="653">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="678">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="DownDoente"/>
+                                </setanim>
+                            </group>
+                            <get-val-32-1 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="31" y="717">
+                            <group eventID="1" id="-1">
+                                <setanim comment="false" x="42" y="737">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="DownSaudavel"/>
+                                </setanim>
+                            </group>
+                        </else>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-314"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="-226"/>
+                            </lesseq>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <moreeq comment="false" id="0" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="46"/>
+                            </moreeq>
+                            <lesseq comment="false" id="1" x="0" y="0">
+                                <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="134"/>
+                            </lesseq>
+                        </and>
+                    </or>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <get-val-32-2 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="0"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>

@@ -88,11 +88,11 @@ class Design_29_29_ActorMovement extends ActorScript
 		{
 			if(actorOfType != null && !actorOfType.dead && !actorOfType.recycled){
 				_House = actorOfType;
+				_xResult = (_House.getXCenter() - actor.getXCenter());
+				_yResult = (_House.getYCenter() - actor.getYCenter());
+				actor.setVelocity(Utils.DEG * (Math.atan2(_yResult, _xResult)), randomFloatBetween(1, 5));
 			}
 		}
-		_xResult = (_House.getXCenter() - actor.getXCenter());
-		_yResult = (_House.getYCenter() - actor.getYCenter());
-		actor.push(_xResult, _yResult, randomFloatBetween(100, 200));
 		
 	}
 	

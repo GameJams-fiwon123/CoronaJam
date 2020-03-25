@@ -14,9 +14,9 @@
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
-        <event-mouse-enter-exit-region comment="false" x="268" y="185">
+        <event-mouse-enter-exit-region comment="false" x="224" y="173">
             <group eventID="2" id="-1">
-                <setanim comment="false" x="279" y="212">
+                <setanim comment="false" x="235" y="200">
                     <ACTOR eid="var" id="0" vid="1"/>
                     <get-val-10-3 comment="false" id="1" x="0" y="0"/>
                 </setanim>

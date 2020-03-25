@@ -75,6 +75,9 @@ class SceneEvents_6 extends SceneScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		showCursor();
+		
 	}
 	
 	override public function forwardMessage(msg:String)

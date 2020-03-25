@@ -61,26 +61,85 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_49 extends ActorScript
+class Design_32_32_PersonBehavior extends ActorScript
 {
+	public var _isInfected:Bool;
+	public var _DiagonalSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
+		nameMap.set("isInfected", "_isInfected");
+		_isInfected = false;
+		nameMap.set("DiagonalSpeed", "_DiagonalSpeed");
+		_DiagonalSpeed = 0;
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAsAny(getActorType(33), event.otherActor.getType(),event.otherActor.getGroup()))
+			if(wrapper.enabled)
 			{
-				event.otherActor.setValue("PersonBehavior", "_isInfected", true);
-				recycleActor(actor);
+				_DiagonalSpeed = Utils.DEG * (Math.atan2(actor.getYVelocity(), actor.getXVelocity()));
+				if((((_DiagonalSpeed >= -45) && (_DiagonalSpeed <= 45)) || (((_DiagonalSpeed >= 315) && (_DiagonalSpeed <= 360)) || ((_DiagonalSpeed >= -360) && (_DiagonalSpeed <= -315)))))
+				{
+					if(_isInfected)
+					{
+						actor.setAnimation("RightDoente");
+					}
+					else
+					{
+						actor.setAnimation("RightSaudavel");
+					}
+				}
+				else if((((_DiagonalSpeed >= -225) && (_DiagonalSpeed <= -135)) || ((_DiagonalSpeed >= 135) && (_DiagonalSpeed <= 225))))
+				{
+					if(_isInfected)
+					{
+						actor.setAnimation("LeftDoente");
+					}
+					else
+					{
+						actor.setAnimation("LeftSaudavel");
+					}
+				}
+				else if((((_DiagonalSpeed >= -134) && (_DiagonalSpeed <= -46)) || ((_DiagonalSpeed >= 226) && (_DiagonalSpeed <= 314))))
+				{
+					if(_isInfected)
+					{
+						actor.setAnimation("UpDoente");
+					}
+					else
+					{
+						actor.setAnimation("UpSaudavel");
+					}
+				}
+				else if((((_DiagonalSpeed >= -314) && (_DiagonalSpeed <= -226)) || ((_DiagonalSpeed >= 46) && (_DiagonalSpeed <= 134))))
+				{
+					if(_isInfected)
+					{
+						actor.setAnimation("DownDoente");
+					}
+					else
+					{
+						actor.setAnimation("DownSaudavel");
+					}
+				}
+			}
+		});
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.drawString("" + _DiagonalSpeed, 0, 0);
 			}
 		});
 		
