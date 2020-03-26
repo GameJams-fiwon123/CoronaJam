@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="7" desc="" eventsnippetid="2" extheight="1144" extwidth="1144" extx="-32" exty="-32" format="4.0.2" gravx="-0.0" gravy="0.0" height="1080" id="0" name="Game" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="1080">
+<scene depth="8" desc="" eventsnippetid="2" extheight="1144" extwidth="1144" extx="-32" exty="-32" format="4.0.2" gravx="-0.0" gravy="0.0" height="1080" id="0" name="Game" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="1080">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
-        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Ground" opacity="100" order="7" rid="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="0,0,255" id="7" locked="false" name="DetectBackground" opacity="100" order="6" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="House" opacity="100" order="5" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="64,64,64" id="3" locked="false" name="Player" opacity="100" order="4" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
-        <layer blendMode="normal" color="255,200,0" id="6" locked="false" name="Spawn" opacity="100" order="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Ground" opacity="100" order="8" rid="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="0,0,255" id="7" locked="false" name="DetectBackground" opacity="100" order="7" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="House" opacity="100" order="6" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="64,64,64" id="3" locked="false" name="Player" opacity="100" order="5" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="255,200,0" id="6" locked="false" name="SpawnPerson" opacity="100" order="4" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="255,0,0" id="8" locked="false" name="SpawnCorona" opacity="100" order="3" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="255,0,255" id="4" locked="false" name="UI" opacity="100" order="2" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="255,175,175" id="5" locked="false" name="FrontUI" opacity="100" order="1" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="0,255,0" id="2" locked="false" name="Mouse" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>

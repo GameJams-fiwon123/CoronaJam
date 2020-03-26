@@ -80,6 +80,7 @@ class ActorEvents_1 extends ActorScript
 			if(wrapper.enabled && sameAsAny(getActorType(49), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
 				recycleActor(event.otherActor);
+				setGameAttribute("isPlaying", false);
 				stopAllSounds();
 				playSound(getSound(52));
 				switchScene(GameModel.get().scenes.get(6).getID(), createFadeOut(1, Utils.getColorRGB(0,0,0)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
@@ -94,6 +95,7 @@ class ActorEvents_1 extends ActorScript
 				if((event.otherActor.getValue("PersonBehavior", "_isInfected") : Bool))
 				{
 					recycleActor(event.otherActor);
+					setGameAttribute("isPlaying", false);
 					stopAllSounds();
 					playSound(getSound(52));
 					switchScene(GameModel.get().scenes.get(6).getID(), createFadeOut(1, Utils.getColorRGB(0,0,0)), createFadeIn(1, Utils.getColorRGB(0,0,0)));

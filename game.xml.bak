@@ -3,10 +3,10 @@
     <keys androidAlias="" androidCert="" androidPassword="" androidPublicKey="" cpmID="" iosTeamID="" ioswhirlKey="" ioswhirlKey1="" ngID="" ngKey="" p12="" p12pwd="" prov-adhoc="" prov-store="" whirlKey="" whirlKey1=""/>
     <exts/>
     <bundles>
-        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Google Play" version="1.0.0"/>
-        <bundle author="" id="com.yourcompany.gamename" internalVersion="1" metroColor="-12566464" name="My Game" store="Windows Store" version="1.0.0"/>
         <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Mac App Store" version="1.0.0"/>
+        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Google Play" version="1.0.0"/>
         <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="App Store" version="1.0.0"/>
+        <bundle author="" id="com.yourcompany.gamename" internalVersion="1" metroColor="-12566464" name="My Game" store="Windows Store" version="1.0.0"/>
     </bundles>
     <scales>
         <scale detailed="1x" id="0" name="1x" size="1.0"/>
@@ -74,6 +74,7 @@
     <attributes>
         <boolean cid="-1" id="3" name="isUsingWater" save="true" value="true"/>
         <number cid="-1" id="4" name="coronaDie" save="true" value="0.0"/>
+        <boolean cid="-1" id="5" name="isPlaying" save="true" value="false"/>
         <number cid="-1" id="2" name="jailPerson" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="isTitlePlaying" save="true" value="false"/>
         <number cid="-1" id="1" name="savePersons" save="true" value="0.0"/>
@@ -107,7 +108,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,3,4,6,15,16,18,19,21,23,25,27,29,31,32,33,35,37,39,41,42,44,46,48,49,52,53,54,55,56,57,58,59,60,61,62,67," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,3,4,6,15,16,18,19,21,23,25,27,29,31,32,33,35,37,39,41,42,44,46,48,49,52,53,54,55,56,57,58,59,60,61,62,67,70," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

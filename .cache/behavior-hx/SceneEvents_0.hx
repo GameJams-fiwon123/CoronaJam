@@ -87,36 +87,40 @@ class SceneEvents_0 extends SceneScript
 		/* ======================== When Creating ========================= */
 		loopSound(getSound(41));
 		hideCursor();
+		setGameAttribute("isPlaying", true);
 		
 		/* ======================= Every N seconds ======================== */
 		runPeriodically(1000 * randomFloatBetween(1, 4), function(timeTask:TimedTask):Void
 		{
 			if(wrapper.enabled)
 			{
-				_dirSpawn = randomInt(0, 3);
-				if((_dirSpawn == 0))
+				if(((getGameAttribute("isPlaying")) : Bool))
 				{
-					_posSpawn = randomInt(0, 1080);
-					_posSpawnY = 0;
-					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
-				}
-				else if((_dirSpawn == 1))
-				{
-					_posSpawn = 1080;
-					_posSpawnY = randomInt(0, 1080);
-					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
-				}
-				else if((_dirSpawn == 2))
-				{
-					_posSpawn = randomInt(0, 1080);
-					_posSpawnY = 1080;
-					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
-				}
-				else if((_dirSpawn == 3))
-				{
-					_posSpawn = 0;
-					_posSpawnY = randomInt(0, 1080);
-					createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+					_dirSpawn = randomInt(0, 3);
+					if((_dirSpawn == 0))
+					{
+						_posSpawn = randomInt(0, 1080);
+						_posSpawnY = 0;
+						createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+					}
+					else if((_dirSpawn == 1))
+					{
+						_posSpawn = 1080;
+						_posSpawnY = randomInt(0, 1080);
+						createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+					}
+					else if((_dirSpawn == 2))
+					{
+						_posSpawn = randomInt(0, 1080);
+						_posSpawnY = 1080;
+						createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+					}
+					else if((_dirSpawn == 3))
+					{
+						_posSpawn = 0;
+						_posSpawnY = randomInt(0, 1080);
+						createRecycledActorOnLayer(getActorType(33), _posSpawn, _posSpawnY, engine.getLayerById(6));
+					}
 				}
 			}
 		}, null);
@@ -126,30 +130,33 @@ class SceneEvents_0 extends SceneScript
 		{
 			if(wrapper.enabled)
 			{
-				_dirSpawn = randomInt(0, 3);
-				if((_dirSpawn == 0))
+				if(((getGameAttribute("isPlaying")) : Bool))
 				{
-					_posSpawn = randomInt(0, 1080);
-					_posSpawnY = 0;
-					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
-				}
-				else if((_dirSpawn == 1))
-				{
-					_posSpawn = 1080;
-					_posSpawnY = randomInt(0, 1080);
-					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
-				}
-				else if((_dirSpawn == 2))
-				{
-					_posSpawn = randomInt(0, 1080);
-					_posSpawnY = 1080;
-					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
-				}
-				else if((_dirSpawn == 3))
-				{
-					_posSpawn = 0;
-					_posSpawnY = randomInt(0, 1080);
-					createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(6));
+					_dirSpawn = randomInt(0, 3);
+					if((_dirSpawn == 0))
+					{
+						_posSpawn = randomInt(0, 1080);
+						_posSpawnY = 0;
+						createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(8));
+					}
+					else if((_dirSpawn == 1))
+					{
+						_posSpawn = 1080;
+						_posSpawnY = randomInt(0, 1080);
+						createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(8));
+					}
+					else if((_dirSpawn == 2))
+					{
+						_posSpawn = randomInt(0, 1080);
+						_posSpawnY = 1080;
+						createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(8));
+					}
+					else if((_dirSpawn == 3))
+					{
+						_posSpawn = 0;
+						_posSpawnY = randomInt(0, 1080);
+						createRecycledActorOnLayer(getActorType(49), _posSpawn, _posSpawnY, engine.getLayerById(8));
+					}
 				}
 			}
 		}, null);

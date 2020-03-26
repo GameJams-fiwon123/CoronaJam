@@ -216,6 +216,21 @@
                                 <die comment="false" x="42" y="888">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
+                                <if comment="false" x="42" y="915">
+                                    <group eventID="1" id="-1">
+                                        <control-sound-channel comment="false" x="53" y="953">
+                                            <int id="0" val="0"/>
+                                            <int id="1" val="1"/>
+                                        </control-sound-channel>
+                                    </group>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <actorswithinlayer2 comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                            <int id="1" val="6"/>
+                                        </actorswithinlayer2>
+                                        <int id="1" val="0"/>
+                                    </eq>
+                                </if>
                             </group>
                             <not comment="false" id="0" x="0" y="0">
                                 <is-anim comment="false" id="0" x="0" y="0">
@@ -303,10 +318,11 @@
                             <int id="2" val="_isInfected"/>
                             <true comment="false" id="3" x="0" y="0"/>
                         </set-attribute>
-                        <play-sound4 comment="false" x="37" y="109">
-                            <int id="0" val="0"/>
+                        <play-sound-channel comment="false" x="37" y="109">
+                            <int id="0" val="1"/>
                             <sound eid="59" id="1"/>
-                        </play-sound4>
+                            <int id="2" val="1"/>
+                        </play-sound-channel>
                     </group>
                     <not comment="false" id="0" x="0" y="0">
                         <get-val-32-3 comment="false" id="0" x="0" y="0"/>

@@ -6,12 +6,16 @@
                 <die comment="false" x="93" y="173">
                     <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                 </die>
-                <stop-sounds comment="false" x="93" y="205"/>
-                <play-sound4 comment="false" x="93" y="225">
+                <set-game-att comment="false" x="93" y="205">
+                    <int id="0" val="isPlaying"/>
+                    <false comment="false" id="1" x="0" y="0"/>
+                </set-game-att>
+                <stop-sounds comment="false" x="93" y="230"/>
+                <play-sound4 comment="false" x="93" y="250">
                     <int id="0" val="0"/>
                     <sound eid="52" id="1"/>
                 </play-sound4>
-                <scene-change-color comment="false" x="93" y="252">
+                <scene-change-color comment="false" x="93" y="277">
                     <scene eid="6" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1"/>
@@ -34,12 +38,16 @@
                         <die comment="false" x="128" y="187">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                         </die>
-                        <stop-sounds comment="false" x="128" y="219"/>
-                        <play-sound4 comment="false" x="128" y="239">
+                        <set-game-att comment="false" x="128" y="219">
+                            <int id="0" val="isPlaying"/>
+                            <false comment="false" id="1" x="0" y="0"/>
+                        </set-game-att>
+                        <stop-sounds comment="false" x="128" y="244"/>
+                        <play-sound4 comment="false" x="128" y="264">
                             <int id="0" val="0"/>
                             <sound eid="52" id="1"/>
                         </play-sound4>
-                        <scene-change-color comment="false" x="128" y="266">
+                        <scene-change-color comment="false" x="128" y="291">
                             <scene eid="6" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="1"/>
@@ -55,19 +63,19 @@
                         <int id="2" val="_isInfected"/>
                     </get-attribute>
                 </if>
-                <else comment="false" x="117" y="305">
+                <else comment="false" x="117" y="330">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="128" y="325">
+                        <die comment="false" x="128" y="350">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                         </die>
-                        <set-game-att comment="false" x="128" y="357">
+                        <set-game-att comment="false" x="128" y="382">
                             <int id="0" val="savePersons"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
                             </plus>
                         </set-game-att>
-                        <play-sound4 comment="false" x="128" y="387">
+                        <play-sound4 comment="false" x="128" y="412">
                             <int id="0" val="0"/>
                             <sound eid="61" id="1"/>
                         </play-sound4>

@@ -78,7 +78,7 @@ class ActorEvents_49 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		loopSound(getSound(60));
+		loopSoundOnChannel(getSound(60), 2);
 		
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
@@ -88,6 +88,7 @@ class ActorEvents_49 extends ActorScript
 				if(!(_startDie))
 				{
 					event.otherActor.setValue("PersonBehavior", "_isInfected", true);
+					loopSoundOnChannel(getSound(59), 1);
 					recycleActor(actor);
 				}
 			}
@@ -103,8 +104,8 @@ class ActorEvents_49 extends ActorScript
 					actor.setAnimation("Die");
 					_startDie = true;
 					actor.setVelocity(0, 0);
-					playSound(getSound(56));
 					setGameAttribute("coronaDie", ((Engine.engine.getGameAttribute("coronaDie") : Float) + 1));
+					playSound(getSound(56));
 				}
 				else
 				{
@@ -123,6 +124,10 @@ class ActorEvents_49 extends ActorScript
 					if(!(actor.isAnimationPlaying()))
 					{
 						recycleActor(actor);
+						if((engine.getNumberOfActorsWithinLayer(engine.getLayerById(8)) == 0))
+						{
+							stopSoundOnChannel(2);
+						}
 					}
 				}
 			}

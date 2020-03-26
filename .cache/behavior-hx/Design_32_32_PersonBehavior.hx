@@ -145,6 +145,10 @@ class Design_32_32_PersonBehavior extends ActorScript
 					if(!(actor.isAnimationPlaying()))
 					{
 						recycleActor(actor);
+						if((engine.getNumberOfActorsWithinLayer(engine.getLayerById(6)) == 0))
+						{
+							stopSoundOnChannel(1);
+						}
 					}
 				}
 			}
@@ -182,7 +186,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 				if(!(_startQuarantine))
 				{
 					event.otherActor.setValue("PersonBehavior", "_isInfected", true);
-					playSound(getSound(59));
+					loopSoundOnChannel(getSound(59), 1);
 				}
 			}
 		});

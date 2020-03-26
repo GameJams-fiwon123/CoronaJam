@@ -3,20 +3,23 @@
     <group eventID="1" id="0">
         <draw comment="false" x="260" y="143">
             <group eventID="1" id="-1">
-                <draw-text comment="false" x="271" y="168">
+                <set-font-new comment="false" x="271" y="168">
+                    <font eid="70" id="0"/>
+                </set-font-new>
+                <draw-text comment="false" x="271" y="195">
                     <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="540"/>
-                    <int id="2" val="500"/>
+                    <int id="1" val="505"/>
+                    <int id="2" val="405"/>
                 </draw-text>
-                <draw-text comment="false" x="271" y="193">
+                <draw-text comment="false" x="271" y="220">
                     <get-game-val-4 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="540"/>
-                    <int id="2" val="535"/>
+                    <int id="1" val="505"/>
+                    <int id="2" val="515"/>
                 </draw-text>
-                <draw-text comment="false" x="271" y="218">
+                <draw-text comment="false" x="271" y="245">
                     <get-game-val-2 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="540"/>
-                    <int id="2" val="555"/>
+                    <int id="1" val="505"/>
+                    <int id="2" val="615"/>
                 </draw-text>
             </group>
         </draw>
