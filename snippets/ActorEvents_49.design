@@ -16,7 +16,12 @@
                             <sound eid="59" id="1"/>
                             <int id="2" val="1"/>
                         </play-sound-channel>
-                        <die comment="false" x="118" y="262">
+                        <setlayer2 comment="false" x="118" y="262">
+                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="9"/>
+                        </setlayer2>
+                        <die comment="false" x="118" y="294">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
@@ -31,46 +36,95 @@
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
-        <event-mouse-enter-exit-actor comment="false" x="15" y="15">
+        <event-mouse-enter-exit-actor comment="false" x="0" y="38">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="42">
+                <if comment="false" x="11" y="65">
                     <group eventID="2" id="-1">
-                        <setanim comment="false" x="37" y="67">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Die"/>
-                        </setanim>
-                        <set-val-31-1 comment="false" x="37" y="94">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-31-1>
-                        <setvel comment="false" x="37" y="119">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0"/>
-                        </setvel>
-                        <set-game-att comment="false" x="37" y="146">
-                            <int id="0" val="coronaDie"/>
-                            <plus comment="false" id="1" x="0" y="0">
-                                <get-game-val-4 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </plus>
+                        <set-game-att comment="false" x="22" y="113">
+                            <int id="0" val="layer"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
                         </set-game-att>
-                        <play-sound4 comment="false" x="37" y="176">
-                            <int id="0" val="0"/>
-                            <sound eid="56" id="1"/>
-                        </play-sound4>
+                        <set-game-att comment="false" x="22" y="146">
+                            <int id="0" val="zOrder"/>
+                            <zindex comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                        </set-game-att>
+                        <if comment="false" x="22" y="179">
+                            <group eventID="2" id="-1">
+                                <setanim comment="false" x="33" y="214">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Die"/>
+                                </setanim>
+                                <set-val-31-1 comment="false" x="33" y="241">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-31-1>
+                                <setvel comment="false" x="33" y="266">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                </setvel>
+                                <set-game-att comment="false" x="33" y="293">
+                                    <int id="0" val="coronaDie"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </plus>
+                                </set-game-att>
+                                <play-sound4 comment="false" x="33" y="323">
+                                    <int id="0" val="0"/>
+                                    <sound eid="56" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <get-game-att comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="isUsingWater"/>
+                                </get-game-att>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-31-1 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </and>
+                        </if>
+                        <else comment="false" x="22" y="362">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="33" y="382">
+                                    <int id="0" val="0"/>
+                                    <sound eid="58" id="1"/>
+                                </play-sound4>
+                            </group>
+                        </else>
                     </group>
-                    <get-game-att comment="false" id="0" x="0" y="0">
-                        <int id="0" val="isUsingWater"/>
-                    </get-game-att>
+                    <or comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <getlayer comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="layer"/>
+                            </get-game-att>
+                        </more>
+                        <and comment="false" id="1" x="0" y="0">
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getlayer comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getlayer>
+                                <get-game-att comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="layer"/>
+                                </get-game-att>
+                            </eq>
+                            <more comment="false" id="1" x="0" y="0">
+                                <zindex comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </zindex>
+                                <get-game-att comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="zOrder"/>
+                                </get-game-att>
+                            </more>
+                        </and>
+                    </or>
                 </if>
-                <else comment="false" x="26" y="215">
-                    <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="235">
-                            <int id="0" val="0"/>
-                            <sound eid="58" id="1"/>
-                        </play-sound4>
-                    </group>
-                </else>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>

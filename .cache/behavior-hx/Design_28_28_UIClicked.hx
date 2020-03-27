@@ -110,10 +110,15 @@ class Design_28_28_UIClicked extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				_Water.alpha = 50 / 100;
-				_Jail.alpha = 100 / 100;
-				setGameAttribute("isUsingWater", false);
-				playSound(getSound(55));
+				if(((actor.getLayerID() > asNumber((getGameAttribute("layer")))) && (actor.getZIndex() > asNumber((getGameAttribute("zOrder"))))))
+				{
+					setGameAttribute("layer", actor.getLayerID());
+					setGameAttribute("zOrder", actor.getZIndex());
+					_Water.alpha = 50 / 100;
+					_Jail.alpha = 100 / 100;
+					setGameAttribute("isUsingWater", false);
+					playSound(getSound(55));
+				}
 			}
 		});
 		
@@ -122,10 +127,15 @@ class Design_28_28_UIClicked extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				_Water.alpha = 100 / 100;
-				_Jail.alpha = 50 / 100;
-				setGameAttribute("isUsingWater", true);
-				playSound(getSound(54));
+				if(((actor.getLayerID() > asNumber((getGameAttribute("layer")))) || ((actor.getLayerID() == ((getGameAttribute("layer")) : Dynamic)) && (actor.getZIndex() > asNumber((getGameAttribute("zOrder")))))))
+				{
+					setGameAttribute("layer", actor.getLayerID());
+					setGameAttribute("zOrder", actor.getZIndex());
+					_Water.alpha = 100 / 100;
+					_Jail.alpha = 50 / 100;
+					setGameAttribute("isUsingWater", true);
+					playSound(getSound(54));
+				}
 			}
 		});
 		

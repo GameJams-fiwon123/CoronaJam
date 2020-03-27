@@ -3,22 +3,56 @@
     <group eventID="2" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-opacity comment="false" x="26" y="42">
-                    <ACTOR eid="var" id="0" vid="1"/>
-                    <int id="1" val="50"/>
-                </set-opacity>
-                <set-opacity comment="false" x="26" y="69">
-                    <ACTOR eid="var" id="0" vid="2"/>
-                    <int id="1" val="100"/>
-                </set-opacity>
-                <set-game-att comment="false" x="26" y="96">
-                    <int id="0" val="isUsingWater"/>
-                    <false comment="false" id="1" x="0" y="0"/>
-                </set-game-att>
-                <play-sound4 comment="false" x="26" y="121">
-                    <int id="0" val="0"/>
-                    <sound eid="55" id="1"/>
-                </play-sound4>
+                <if comment="false" x="26" y="42">
+                    <group eventID="2" id="-1">
+                        <set-game-att comment="false" x="37" y="85">
+                            <int id="0" val="layer"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                        </set-game-att>
+                        <set-game-att comment="false" x="37" y="118">
+                            <int id="0" val="zOrder"/>
+                            <zindex comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                        </set-game-att>
+                        <set-opacity comment="false" x="37" y="151">
+                            <ACTOR eid="var" id="0" vid="1"/>
+                            <int id="1" val="50"/>
+                        </set-opacity>
+                        <set-opacity comment="false" x="37" y="178">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                            <int id="1" val="100"/>
+                        </set-opacity>
+                        <set-game-att comment="false" x="37" y="205">
+                            <int id="0" val="isUsingWater"/>
+                            <false comment="false" id="1" x="0" y="0"/>
+                        </set-game-att>
+                        <play-sound4 comment="false" x="37" y="230">
+                            <int id="0" val="0"/>
+                            <sound eid="55" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <getlayer comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="layer"/>
+                            </get-game-att>
+                        </more>
+                        <more comment="false" id="1" x="0" y="0">
+                            <zindex comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="zOrder"/>
+                            </get-game-att>
+                        </more>
+                    </and>
+                </if>
             </group>
             <ACTOR eid="var" id="0" vid="2"/>
             <int id="1" val="2"/>
@@ -62,22 +96,66 @@
     <group eventID="7" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="7" id="-1">
-                <set-opacity comment="false" x="26" y="42">
-                    <ACTOR eid="var" id="0" vid="1"/>
-                    <int id="1" val="100"/>
-                </set-opacity>
-                <set-opacity comment="false" x="26" y="69">
-                    <ACTOR eid="var" id="0" vid="2"/>
-                    <int id="1" val="50"/>
-                </set-opacity>
-                <set-game-att comment="false" x="26" y="96">
-                    <int id="0" val="isUsingWater"/>
-                    <true comment="false" id="1" x="0" y="0"/>
-                </set-game-att>
-                <play-sound4 comment="false" x="26" y="121">
-                    <int id="0" val="0"/>
-                    <sound eid="54" id="1"/>
-                </play-sound4>
+                <if comment="false" x="26" y="42">
+                    <group eventID="7" id="-1">
+                        <set-game-att comment="false" x="37" y="90">
+                            <int id="0" val="layer"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                        </set-game-att>
+                        <set-game-att comment="false" x="37" y="123">
+                            <int id="0" val="zOrder"/>
+                            <zindex comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                        </set-game-att>
+                        <set-opacity comment="false" x="37" y="156">
+                            <ACTOR eid="var" id="0" vid="1"/>
+                            <int id="1" val="100"/>
+                        </set-opacity>
+                        <set-opacity comment="false" x="37" y="183">
+                            <ACTOR eid="var" id="0" vid="2"/>
+                            <int id="1" val="50"/>
+                        </set-opacity>
+                        <set-game-att comment="false" x="37" y="210">
+                            <int id="0" val="isUsingWater"/>
+                            <true comment="false" id="1" x="0" y="0"/>
+                        </set-game-att>
+                        <play-sound4 comment="false" x="37" y="235">
+                            <int id="0" val="0"/>
+                            <sound eid="54" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <getlayer comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="layer"/>
+                            </get-game-att>
+                        </more>
+                        <and comment="false" id="1" x="0" y="0">
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getlayer comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getlayer>
+                                <get-game-att comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="layer"/>
+                                </get-game-att>
+                            </eq>
+                            <more comment="false" id="1" x="0" y="0">
+                                <zindex comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </zindex>
+                                <get-game-att comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="zOrder"/>
+                                </get-game-att>
+                            </more>
+                        </and>
+                    </or>
+                </if>
             </group>
             <ACTOR eid="var" id="0" vid="1"/>
             <int id="1" val="2"/>

@@ -5,23 +5,57 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="1" id="-1">
-                        <play-sound4 comment="false" x="37" y="67">
-                            <int id="0" val="0"/>
-                            <sound eid="57" id="1"/>
-                        </play-sound4>
+                        <set-game-att comment="false" x="37" y="85">
+                            <int id="0" val="layer"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                        </set-game-att>
+                        <set-game-att comment="false" x="37" y="118">
+                            <int id="0" val="zOrder"/>
+                            <zindex comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                        </set-game-att>
+                        <if comment="false" x="37" y="151">
+                            <group eventID="1" id="-1">
+                                <play-sound4 comment="false" x="48" y="176">
+                                    <int id="0" val="0"/>
+                                    <sound eid="57" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <get-game-att comment="false" id="0" x="0" y="0">
+                                <int id="0" val="isUsingWater"/>
+                            </get-game-att>
+                        </if>
+                        <else comment="false" x="37" y="215">
+                            <group eventID="1" id="-1">
+                                <play-sound4 comment="false" x="48" y="235">
+                                    <int id="0" val="0"/>
+                                    <sound eid="58" id="1"/>
+                                </play-sound4>
+                            </group>
+                        </else>
                     </group>
-                    <get-game-att comment="false" id="0" x="0" y="0">
-                        <int id="0" val="isUsingWater"/>
-                    </get-game-att>
+                    <and comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <getlayer comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="layer"/>
+                            </get-game-att>
+                        </more>
+                        <more comment="false" id="1" x="0" y="0">
+                            <zindex comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="zOrder"/>
+                            </get-game-att>
+                        </more>
+                    </and>
                 </if>
-                <else comment="false" x="26" y="106">
-                    <group eventID="1" id="-1">
-                        <play-sound4 comment="false" x="37" y="126">
-                            <int id="0" val="0"/>
-                            <sound eid="58" id="1"/>
-                        </play-sound4>
-                    </group>
-                </else>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>

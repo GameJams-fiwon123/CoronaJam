@@ -95,7 +95,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 				if(!(_startQuarantine))
 				{
 					_DiagonalSpeed = Utils.DEG * (Math.atan2(actor.getYVelocity(), actor.getXVelocity()));
-					if((((_DiagonalSpeed >= -45) && (_DiagonalSpeed <= 45)) || (((_DiagonalSpeed >= 315) && (_DiagonalSpeed <= 360)) || ((_DiagonalSpeed >= -360) && (_DiagonalSpeed <= -315)))))
+					if((((_DiagonalSpeed >= -45) && (_DiagonalSpeed <= 45)) || (((_DiagonalSpeed > 314) && (_DiagonalSpeed <= 360)) || ((_DiagonalSpeed >= -360) && (_DiagonalSpeed < -314)))))
 					{
 						if(_isInfected)
 						{
@@ -106,7 +106,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 							actor.setAnimation("RightSaudavel");
 						}
 					}
-					else if((((_DiagonalSpeed >= -225) && (_DiagonalSpeed <= -135)) || ((_DiagonalSpeed >= 135) && (_DiagonalSpeed <= 225))))
+					else if((((_DiagonalSpeed >= -225) && (_DiagonalSpeed < -134)) || ((_DiagonalSpeed > 135) && (_DiagonalSpeed <= 225))))
 					{
 						if(_isInfected)
 						{
@@ -117,7 +117,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 							actor.setAnimation("LeftSaudavel");
 						}
 					}
-					else if((((_DiagonalSpeed >= -134) && (_DiagonalSpeed <= -46)) || ((_DiagonalSpeed >= 226) && (_DiagonalSpeed <= 314))))
+					else if((((_DiagonalSpeed >= -134) && (_DiagonalSpeed < -45)) || ((_DiagonalSpeed > 225) && (_DiagonalSpeed <= 314))))
 					{
 						if(_isInfected)
 						{
@@ -128,7 +128,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 							actor.setAnimation("UpSaudavel");
 						}
 					}
-					else if((((_DiagonalSpeed >= -314) && (_DiagonalSpeed <= -226)) || ((_DiagonalSpeed >= 46) && (_DiagonalSpeed <= 134))))
+					else if((((_DiagonalSpeed >= -314) && (_DiagonalSpeed < -225)) || ((_DiagonalSpeed > 45) && (_DiagonalSpeed <= 134))))
 					{
 						if(_isInfected)
 						{
@@ -145,7 +145,7 @@ class Design_32_32_PersonBehavior extends ActorScript
 					if(!(actor.isAnimationPlaying()))
 					{
 						recycleActor(actor);
-						if((engine.getNumberOfActorsWithinLayer(engine.getLayerById(6)) == 0))
+						if((engine.getNumberOfActorsWithinLayer(engine.getLayerById(9)) == 0))
 						{
 							stopSoundOnChannel(1);
 						}
@@ -159,21 +159,26 @@ class Design_32_32_PersonBehavior extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				if((_isInfected && !(((getGameAttribute("isUsingWater")) : Bool))))
+				if(((actor.getLayerID() > asNumber((getGameAttribute("layer")))) || ((actor.getLayerID() == ((getGameAttribute("layer")) : Dynamic)) && (actor.getZIndex() > asNumber((getGameAttribute("zOrder")))))))
 				{
-					actor.setAnimation("Quarantine");
-					_startQuarantine = true;
-					actor.setVelocity(0, 0);
-					playSound(getSound(62));
-					setGameAttribute("jailPerson", ((Engine.engine.getGameAttribute("jailPerson") : Float) + 1));
-				}
-				else if(((getGameAttribute("isUsingWater")) : Bool))
-				{
-					playSound(getSound(57));
-				}
-				else
-				{
-					playSound(getSound(58));
+					setGameAttribute("layer", actor.getLayerID());
+					setGameAttribute("zOrder", actor.getZIndex());
+					if((_isInfected && (!(((getGameAttribute("isUsingWater")) : Bool)) && !(_startQuarantine))))
+					{
+						actor.setAnimation("Quarantine");
+						_startQuarantine = true;
+						actor.setVelocity(0, 0);
+						playSound(getSound(62));
+						setGameAttribute("jailPerson", ((Engine.engine.getGameAttribute("jailPerson") : Float) + 1));
+					}
+					else if(((getGameAttribute("isUsingWater")) : Bool))
+					{
+						playSound(getSound(57));
+					}
+					else
+					{
+						playSound(getSound(58));
+					}
 				}
 			}
 		});
@@ -183,9 +188,10 @@ class Design_32_32_PersonBehavior extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(33), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if(!(_startQuarantine))
+				if((!(_startQuarantine) && _isInfected))
 				{
 					event.otherActor.setValue("PersonBehavior", "_isInfected", true);
+					event.otherActor.moveToLayer(engine.getLayerById(9));
 					loopSoundOnChannel(getSound(59), 1);
 				}
 			}

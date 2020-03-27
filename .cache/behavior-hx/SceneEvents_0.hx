@@ -88,6 +88,10 @@ class SceneEvents_0 extends SceneScript
 		loopSound(getSound(41));
 		hideCursor();
 		setGameAttribute("isPlaying", true);
+		setGameAttribute("isUsingWater", true);
+		setGameAttribute("jailPerson", 0);
+		setGameAttribute("savePersons", 0);
+		setGameAttribute("coronaDie", 0);
 		
 		/* ======================= Every N seconds ======================== */
 		runPeriodically(1000 * randomFloatBetween(1, 4), function(timeTask:TimedTask):Void
@@ -124,6 +128,16 @@ class SceneEvents_0 extends SceneScript
 				}
 			}
 		}, null);
+		
+		/* ============================ Click ============================= */
+		addMouseReleasedListener(function(list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				setGameAttribute("layer", -1);
+				setGameAttribute("zOrder", -1);
+			}
+		});
 		
 		/* ======================= Every N seconds ======================== */
 		runPeriodically(1000 * randomFloatBetween(1, 4), function(timeTask:TimedTask):Void

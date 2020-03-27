@@ -12,7 +12,7 @@
     <music atlasID="0" desc="" id="55" loop="true" name="ClickGaiola" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="53" loop="true" name="ClickSound" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="54" loop="true" name="ClickWater" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="31" fixedrot="false" fric="0.2" gid="3" id="49" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Corona" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="50" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="31" fixedrot="true" fric="0.2" gid="3" id="49" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="Corona" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="50" static="false">
         <snippets>
             <s enabled="true" id="29">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -156,7 +156,7 @@
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Quarantine" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="9" fixedrot="false" fric="0.2" gid="0" id="6" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Player" oid="-1" pausable="true" physicsMode="1" rest="0.0" shared="false" sprite="7" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="9" fixedrot="false" fric="0.2" gid="0" id="6" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Player" oid="-1" pausable="true" physicsMode="1" rest="0.0" shared="false" sprite="7" static="true">
         <snippets>
             <s enabled="true" id="10">
                 <prop id="2147483647" list="0" val="thisactor"/>

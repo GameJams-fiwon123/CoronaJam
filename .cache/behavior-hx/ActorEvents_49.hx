@@ -64,6 +64,8 @@ import com.stencyl.graphics.shaders.BloomShader;
 class ActorEvents_49 extends ActorScript
 {
 	public var _startDie:Bool;
+	public var _startQuarantine:Bool;
+	public var _isInfected:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
@@ -71,6 +73,10 @@ class ActorEvents_49 extends ActorScript
 		super(actor);
 		nameMap.set("startDie", "_startDie");
 		_startDie = false;
+		nameMap.set("startQuarantine", "_startQuarantine");
+		_startQuarantine = false;
+		nameMap.set("isInfected", "_isInfected");
+		_isInfected = false;
 		
 	}
 	
@@ -89,6 +95,7 @@ class ActorEvents_49 extends ActorScript
 				{
 					event.otherActor.setValue("PersonBehavior", "_isInfected", true);
 					loopSoundOnChannel(getSound(59), 1);
+					event.otherActor.moveToLayer(engine.getLayerById(9));
 					recycleActor(actor);
 				}
 			}
@@ -99,17 +106,22 @@ class ActorEvents_49 extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				if(((getGameAttribute("isUsingWater")) : Bool))
+				if(((actor.getLayerID() > asNumber((getGameAttribute("layer")))) || ((actor.getLayerID() == ((getGameAttribute("layer")) : Dynamic)) && (actor.getZIndex() > asNumber((getGameAttribute("zOrder")))))))
 				{
-					actor.setAnimation("Die");
-					_startDie = true;
-					actor.setVelocity(0, 0);
-					setGameAttribute("coronaDie", ((Engine.engine.getGameAttribute("coronaDie") : Float) + 1));
-					playSound(getSound(56));
-				}
-				else
-				{
-					playSound(getSound(58));
+					setGameAttribute("layer", actor.getLayerID());
+					setGameAttribute("zOrder", actor.getZIndex());
+					if((((getGameAttribute("isUsingWater")) : Bool) && !(_startDie)))
+					{
+						actor.setAnimation("Die");
+						_startDie = true;
+						actor.setVelocity(0, 0);
+						setGameAttribute("coronaDie", ((Engine.engine.getGameAttribute("coronaDie") : Float) + 1));
+						playSound(getSound(56));
+					}
+					else
+					{
+						playSound(getSound(58));
+					}
 				}
 			}
 		});

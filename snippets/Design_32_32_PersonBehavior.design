@@ -53,10 +53,10 @@
                                 </and>
                                 <or comment="false" id="1" x="0" y="0">
                                     <and comment="false" id="0" x="0" y="0">
-                                        <moreeq comment="false" id="0" x="0" y="0">
+                                        <more comment="false" id="0" x="0" y="0">
                                             <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                            <int id="1" val="315"/>
-                                        </moreeq>
+                                            <int id="1" val="314"/>
+                                        </more>
                                         <lesseq comment="false" id="1" x="0" y="0">
                                             <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                             <int id="1" val="360"/>
@@ -67,10 +67,10 @@
                                             <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                             <int id="1" val="-360"/>
                                         </moreeq>
-                                        <lesseq comment="false" id="1" x="0" y="0">
+                                        <less comment="false" id="1" x="0" y="0">
                                             <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                            <int id="1" val="-315"/>
-                                        </lesseq>
+                                            <int id="1" val="-314"/>
+                                        </less>
                                     </and>
                                 </or>
                             </or>
@@ -101,16 +101,16 @@
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="-225"/>
                                     </moreeq>
-                                    <lesseq comment="false" id="1" x="0" y="0">
+                                    <less comment="false" id="1" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="-135"/>
-                                    </lesseq>
+                                        <int id="1" val="-134"/>
+                                    </less>
                                 </and>
                                 <and comment="false" id="1" x="0" y="0">
-                                    <moreeq comment="false" id="0" x="0" y="0">
+                                    <more comment="false" id="0" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="135"/>
-                                    </moreeq>
+                                    </more>
                                     <lesseq comment="false" id="1" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="225"/>
@@ -144,16 +144,16 @@
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="-134"/>
                                     </moreeq>
-                                    <lesseq comment="false" id="1" x="0" y="0">
+                                    <less comment="false" id="1" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="-46"/>
-                                    </lesseq>
+                                        <int id="1" val="-45"/>
+                                    </less>
                                 </and>
                                 <and comment="false" id="1" x="0" y="0">
-                                    <moreeq comment="false" id="0" x="0" y="0">
+                                    <more comment="false" id="0" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="226"/>
-                                    </moreeq>
+                                        <int id="1" val="225"/>
+                                    </more>
                                     <lesseq comment="false" id="1" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="314"/>
@@ -187,16 +187,16 @@
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="-314"/>
                                     </moreeq>
-                                    <lesseq comment="false" id="1" x="0" y="0">
+                                    <less comment="false" id="1" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="-226"/>
-                                    </lesseq>
+                                        <int id="1" val="-225"/>
+                                    </less>
                                 </and>
                                 <and comment="false" id="1" x="0" y="0">
-                                    <moreeq comment="false" id="0" x="0" y="0">
+                                    <more comment="false" id="0" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="46"/>
-                                    </moreeq>
+                                        <int id="1" val="45"/>
+                                    </more>
                                     <lesseq comment="false" id="1" x="0" y="0">
                                         <get-val-32-2 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="134"/>
@@ -226,7 +226,7 @@
                                     <eq comment="false" id="0" x="0" y="0">
                                         <actorswithinlayer2 comment="false" id="0" x="0" y="0">
                                             <int id="0" val="0"/>
-                                            <int id="1" val="6"/>
+                                            <int id="1" val="9"/>
                                         </actorswithinlayer2>
                                         <int id="1" val="0"/>
                                     </eq>
@@ -249,58 +249,107 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="42">
                     <group eventID="2" id="-1">
-                        <setanim comment="false" x="37" y="77">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="Quarantine"/>
-                        </setanim>
-                        <set-val-32-3 comment="false" x="37" y="104">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-32-3>
-                        <setvel comment="false" x="37" y="129">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <int id="2" val="0"/>
-                        </setvel>
-                        <play-sound4 comment="false" x="37" y="156">
-                            <int id="0" val="0"/>
-                            <sound eid="62" id="1"/>
-                        </play-sound4>
-                        <set-game-att comment="false" x="37" y="183">
-                            <int id="0" val="jailPerson"/>
-                            <plus comment="false" id="1" x="0" y="0">
-                                <get-game-val-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </plus>
+                        <set-game-att comment="false" x="37" y="90">
+                            <int id="0" val="layer"/>
+                            <getlayer comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
                         </set-game-att>
-                    </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <get-val-32-1 comment="false" id="0" x="0" y="0"/>
-                        <not comment="false" id="1" x="0" y="0">
+                        <set-game-att comment="false" x="37" y="123">
+                            <int id="0" val="zOrder"/>
+                            <zindex comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </zindex>
+                        </set-game-att>
+                        <if comment="false" x="37" y="156">
+                            <group eventID="2" id="-1">
+                                <setanim comment="false" x="48" y="196">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="Quarantine"/>
+                                </setanim>
+                                <set-val-32-3 comment="false" x="48" y="223">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-32-3>
+                                <setvel comment="false" x="48" y="248">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="0"/>
+                                </setvel>
+                                <play-sound4 comment="false" x="48" y="275">
+                                    <int id="0" val="0"/>
+                                    <sound eid="62" id="1"/>
+                                </play-sound4>
+                                <set-game-att comment="false" x="48" y="302">
+                                    <int id="0" val="jailPerson"/>
+                                    <plus comment="false" id="1" x="0" y="0">
+                                        <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </plus>
+                                </set-game-att>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <get-val-32-1 comment="false" id="0" x="0" y="0"/>
+                                <and comment="false" id="1" x="0" y="0">
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-game-att comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="isUsingWater"/>
+                                        </get-game-att>
+                                    </not>
+                                    <not comment="false" id="1" x="0" y="0">
+                                        <get-val-32-3 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </and>
+                            </and>
+                        </if>
+                        <else-if comment="false" x="37" y="344">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="48" y="369">
+                                    <int id="0" val="0"/>
+                                    <sound eid="57" id="1"/>
+                                </play-sound4>
+                            </group>
                             <get-game-att comment="false" id="0" x="0" y="0">
                                 <int id="0" val="isUsingWater"/>
                             </get-game-att>
-                        </not>
-                    </and>
+                        </else-if>
+                        <else comment="false" x="37" y="408">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="48" y="428">
+                                    <int id="0" val="0"/>
+                                    <sound eid="58" id="1"/>
+                                </play-sound4>
+                            </group>
+                        </else>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <more comment="false" id="0" x="0" y="0">
+                            <getlayer comment="false" id="0" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getlayer>
+                            <get-game-att comment="false" id="1" x="0" y="0">
+                                <int id="0" val="layer"/>
+                            </get-game-att>
+                        </more>
+                        <and comment="false" id="1" x="0" y="0">
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getlayer comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </getlayer>
+                                <get-game-att comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="layer"/>
+                                </get-game-att>
+                            </eq>
+                            <more comment="false" id="1" x="0" y="0">
+                                <zindex comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </zindex>
+                                <get-game-att comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="zOrder"/>
+                                </get-game-att>
+                            </more>
+                        </and>
+                    </or>
                 </if>
-                <else-if comment="false" x="26" y="225">
-                    <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="250">
-                            <int id="0" val="0"/>
-                            <sound eid="57" id="1"/>
-                        </play-sound4>
-                    </group>
-                    <get-game-att comment="false" id="0" x="0" y="0">
-                        <int id="0" val="isUsingWater"/>
-                    </get-game-att>
-                </else-if>
-                <else comment="false" x="26" y="289">
-                    <group eventID="2" id="-1">
-                        <play-sound4 comment="false" x="37" y="309">
-                            <int id="0" val="0"/>
-                            <sound eid="58" id="1"/>
-                        </play-sound4>
-                    </group>
-                </else>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>
@@ -312,21 +361,29 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="3" id="-1">
-                        <set-attribute comment="false" x="37" y="77">
+                        <set-attribute comment="false" x="37" y="82">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="PersonBehavior"/>
                             <int id="2" val="_isInfected"/>
                             <true comment="false" id="3" x="0" y="0"/>
                         </set-attribute>
-                        <play-sound-channel comment="false" x="37" y="109">
+                        <setlayer2 comment="false" x="37" y="114">
+                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="9"/>
+                        </setlayer2>
+                        <play-sound-channel comment="false" x="37" y="146">
                             <int id="0" val="1"/>
                             <sound eid="59" id="1"/>
                             <int id="2" val="1"/>
                         </play-sound-channel>
                     </group>
-                    <not comment="false" id="0" x="0" y="0">
-                        <get-val-32-3 comment="false" id="0" x="0" y="0"/>
-                    </not>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-32-3 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <get-val-32-1 comment="false" id="1" x="0" y="0"/>
+                    </and>
                 </if>
             </group>
             <ACTOR eid="this" id="0"/>

@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <init comment="false" x="254" y="115">
+        <init comment="false" x="122" y="96">
             <group eventID="1" id="-1">
-                <play-sound4 comment="false" x="265" y="140">
+                <play-sound4 comment="false" x="133" y="121">
                     <int id="0" val="1"/>
                     <sound eid="41" id="1"/>
                 </play-sound4>
-                <mousedisp comment="false" x="265" y="167">
+                <mousedisp comment="false" x="133" y="148">
                     <int id="0" val="0"/>
                 </mousedisp>
-                <set-game-att comment="false" x="265" y="194">
+                <set-game-att comment="false" x="133" y="175">
                     <int id="0" val="isPlaying"/>
                     <true comment="false" id="1" x="0" y="0"/>
+                </set-game-att>
+                <set-game-att comment="false" x="133" y="200">
+                    <int id="0" val="isUsingWater"/>
+                    <true comment="false" id="1" x="0" y="0"/>
+                </set-game-att>
+                <set-game-att comment="false" x="133" y="225">
+                    <int id="0" val="jailPerson"/>
+                    <int id="1" val="0"/>
+                </set-game-att>
+                <set-game-att comment="false" x="133" y="245">
+                    <int id="0" val="savePersons"/>
+                    <int id="1" val="0"/>
+                </set-game-att>
+                <set-game-att comment="false" x="133" y="265">
+                    <int id="0" val="coronaDie"/>
+                    <int id="1" val="0"/>
                 </set-game-att>
             </group>
         </init>
@@ -260,4 +276,20 @@
         </event-periodic>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <event-mouse-press-release comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <set-game-att comment="false" x="26" y="42">
+                    <int id="0" val="layer"/>
+                    <int id="1" val="-1"/>
+                </set-game-att>
+                <set-game-att comment="false" x="26" y="62">
+                    <int id="0" val="zOrder"/>
+                    <int id="1" val="-1"/>
+                </set-game-att>
+            </group>
+            <int id="0" val="1"/>
+        </event-mouse-press-release>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>

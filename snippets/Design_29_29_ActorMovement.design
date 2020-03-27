@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <init comment="false" x="2" y="108">
+        <init comment="false" x="4" y="51">
             <group eventID="1" id="-1">
-                <actors-of-type3 comment="false" x="13" y="133">
+                <actors-of-type3 comment="false" x="15" y="76">
                     <group eventID="1" id="-1">
-                        <set-val-29-1 comment="false" x="24" y="165">
+                        <set-val-29-1 comment="false" x="26" y="108">
                             <actor-of-type comment="false" id="0" x="0" y="0"/>
                         </set-val-29-1>
-                        <set-val-29-2 comment="false" x="24" y="197">
+                        <set-val-29-2 comment="false" x="26" y="140">
                             <minus comment="false" id="0" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="var" id="0" vid="1"/>
@@ -20,7 +20,7 @@
                                 </get-xy>
                             </minus>
                         </set-val-29-2>
-                        <set-val-29-3 comment="false" x="24" y="235">
+                        <set-val-29-3 comment="false" x="26" y="178">
                             <minus comment="false" id="0" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
                                     <ACTOR eid="var" id="0" vid="1"/>
@@ -32,7 +32,7 @@
                                 </get-xy>
                             </minus>
                         </set-val-29-3>
-                        <setvel comment="false" x="24" y="273">
+                        <setvel comment="false" x="26" y="216">
                             <ACTOR eid="this" id="0"/>
                             <to-degreesradians comment="false" id="1" x="0" y="0">
                                 <int id="0" val="0"/>
