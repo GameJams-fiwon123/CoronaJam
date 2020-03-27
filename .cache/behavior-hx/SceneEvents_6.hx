@@ -76,6 +76,7 @@ class SceneEvents_6 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		stopAllSounds();
 		showCursor();
 		
 		/* ======================= After N seconds ======================== */

@@ -3,7 +3,8 @@
     <group eventID="1" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <mousedisp comment="false" x="26" y="40">
+                <stop-sounds comment="false" x="26" y="40"/>
+                <mousedisp comment="false" x="26" y="60">
                     <int id="0" val="1"/>
                 </mousedisp>
             </group>

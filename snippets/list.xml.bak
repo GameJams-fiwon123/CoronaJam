@@ -14,9 +14,10 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
-            <event displayName="Every N secs Person" enabled="true" id="2" name="event-periodic" order="2" repeats="true"/>
-            <event displayName="Every N secs Corona" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
-            <event displayName="Click" enabled="true" id="4" name="event-mouse-press-release" order="4" repeats="true"/>
+            <event displayName="Every N secs Person" enabled="true" id="2" name="event-periodic" order="3" repeats="true"/>
+            <event displayName="Every N secs Corona" enabled="true" id="3" name="event-periodic" order="4" repeats="true"/>
+            <event displayName="Click" enabled="true" id="4" name="event-mouse-press-release" order="6" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="5" name="draw" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="4" attachedevent="true" class="scripts.ActorEvents_4" classname="scripts.ActorEvents_4" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="3" name="ActorEvents_4" oid="-1" package="scripts." shared="false" type="actor">

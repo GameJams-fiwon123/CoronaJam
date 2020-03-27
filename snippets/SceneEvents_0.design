@@ -30,6 +30,18 @@
                     <int id="0" val="coronaDie"/>
                     <int id="1" val="0"/>
                 </set-game-att>
+                <set-game-att comment="false" x="133" y="285">
+                    <int id="0" val="level"/>
+                    <int id="1" val="1"/>
+                </set-game-att>
+                <set-game-att comment="false" x="133" y="305">
+                    <int id="0" val="zOrder"/>
+                    <int id="1" val="-1"/>
+                </set-game-att>
+                <set-game-att comment="false" x="133" y="325">
+                    <int id="0" val="layer"/>
+                    <int id="1" val="-1"/>
+                </set-game-att>
             </group>
         </init>
     </group>
@@ -68,7 +80,7 @@
                                         <get-game-att comment="false" id="0" x="0" y="0">
                                             <int id="0" val="totalSpawn"/>
                                         </get-game-att>
-                                        <int id="1" val="120"/>
+                                        <int id="1" val="30"/>
                                     </mod>
                                     <int id="1" val="0"/>
                                 </eq>
@@ -239,7 +251,7 @@
                                         <get-game-att comment="false" id="0" x="0" y="0">
                                             <int id="0" val="totalSpawn"/>
                                         </get-game-att>
-                                        <int id="1" val="120"/>
+                                        <int id="1" val="30"/>
                                     </mod>
                                     <int id="1" val="0"/>
                                 </eq>
@@ -392,4 +404,18 @@
         </event-mouse-press-release>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <get-game-att comment="false" id="0" x="0" y="0">
+                        <int id="0" val="totalSpawn"/>
+                    </get-game-att>
+                    <int id="1" val="540"/>
+                    <int id="2" val="540"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>
