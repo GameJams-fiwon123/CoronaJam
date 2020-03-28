@@ -43,7 +43,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import com.stencyl.graphics.shaders.BasicShader;
 import com.stencyl.graphics.shaders.GrayscaleShader;
@@ -62,33 +61,39 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_6 extends SceneScript
+class ActorEvents_67 extends ActorScript
 {
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		stopAllSounds();
-		showCursor();
-		
-		/* ======================= After N seconds ======================== */
-		runLater(1000 * 5, function(timeTask:TimedTask):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && 3 == mouseState)
 			{
-				stopAllSounds();
-				showCursor();
-				switchScene(GameModel.get().scenes.get(3).getID(), createFadeOut(1.5, Utils.getColorRGB(0,0,0)), createFadeIn(1.5, Utils.getColorRGB(0,0,0)));
+				if(((actor.getLayerID() > asNumber((getGameAttribute("layer")))) && (actor.getZIndex() > asNumber((getGameAttribute("zOrder"))))))
+				{
+					setGameAttribute("layer", actor.getLayerID());
+					setGameAttribute("zOrder", actor.getZIndex());
+					if(((getGameAttribute("isUsingWater")) : Bool))
+					{
+						playSound(getSound(57));
+					}
+					else
+					{
+						playSound(getSound(58));
+					}
+				}
 			}
-		}, null);
+		});
 		
 	}
 	

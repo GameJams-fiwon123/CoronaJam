@@ -62,7 +62,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_6 extends SceneScript
+class SceneEvents_1 extends SceneScript
 {
 	
 	
@@ -76,19 +76,11 @@ class SceneEvents_6 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		stopAllSounds();
-		showCursor();
-		
-		/* ======================= After N seconds ======================== */
-		runLater(1000 * 5, function(timeTask:TimedTask):Void
+		if(!(((getGameAttribute("isTitlePlaying")) : Bool)))
 		{
-			if(wrapper.enabled)
-			{
-				stopAllSounds();
-				showCursor();
-				switchScene(GameModel.get().scenes.get(3).getID(), createFadeOut(1.5, Utils.getColorRGB(0,0,0)), createFadeIn(1.5, Utils.getColorRGB(0,0,0)));
-			}
-		}, null);
+			loopSound(getSound(48));
+			setGameAttribute("isTitlePlaying", true);
+		}
 		
 	}
 	

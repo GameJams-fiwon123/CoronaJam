@@ -74,15 +74,15 @@
     <attributes>
         <boolean cid="-1" id="3" name="isUsingWater" save="true" value="true"/>
         <number cid="-1" id="4" name="coronaDie" save="true" value="0.0"/>
-        <number cid="-1" id="8" name="maxLevel" save="true" value="3"/>
+        <number cid="-1" id="8" name="maxLevel" save="true" value="1"/>
         <boolean cid="-1" id="5" name="isPlaying" save="true" value="false"/>
         <number cid="-1" id="2" name="jailPerson" save="true" value="0.0"/>
         <boolean cid="-1" id="0" name="isTitlePlaying" save="true" value="false"/>
-        <number cid="-1" id="9" name="level" save="true" value="1"/>
+        <number cid="-1" id="9" name="level" save="true" value="5"/>
         <number cid="-1" id="7" name="zOrder" save="true" value="-1"/>
+        <number cid="-1" id="10" name="timeSpawn" save="true" value="0"/>
         <number cid="-1" id="1" name="savePersons" save="true" value="0.0"/>
         <number cid="-1" id="6" name="layer" save="true" value="-1"/>
-        <number cid="-1" id="10" name="totalSpawn" save="true" value="0"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

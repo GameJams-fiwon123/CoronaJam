@@ -3,7 +3,15 @@
     <group eventID="3" id="0">
         <event-delay comment="false" x="53" y="65">
             <group eventID="3" id="-1">
-                <scene-change-color comment="false" x="64" y="92">
+                <play-sound4 comment="false" x="64" y="92">
+                    <int id="0" val="1"/>
+                    <sound eid="48" id="1"/>
+                </play-sound4>
+                <set-game-att comment="false" x="64" y="119">
+                    <int id="0" val="isTitlePlaying"/>
+                    <true comment="false" id="1" x="0" y="0"/>
+                </set-game-att>
+                <scene-change-color comment="false" x="64" y="144">
                     <scene eid="1" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="1.5"/>
