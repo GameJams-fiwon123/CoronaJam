@@ -226,7 +226,7 @@
                                     <eq comment="false" id="0" x="0" y="0">
                                         <actorswithinlayer2 comment="false" id="0" x="0" y="0">
                                             <int id="0" val="0"/>
-                                            <int id="1" val="9"/>
+                                            <int id="1" val="7"/>
                                         </actorswithinlayer2>
                                         <int id="1" val="0"/>
                                     </eq>
@@ -312,14 +312,17 @@
                                 <int id="0" val="isUsingWater"/>
                             </get-game-att>
                         </else-if>
-                        <else comment="false" x="37" y="408">
+                        <else-if comment="false" x="37" y="408">
                             <group eventID="2" id="-1">
-                                <play-sound4 comment="false" x="48" y="428">
+                                <play-sound4 comment="false" x="48" y="438">
                                     <int id="0" val="0"/>
                                     <sound eid="58" id="1"/>
                                 </play-sound4>
                             </group>
-                        </else>
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-32-3 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </else-if>
                     </group>
                     <or comment="false" id="0" x="0" y="0">
                         <more comment="false" id="0" x="0" y="0">
@@ -370,7 +373,7 @@
                         <setlayer2 comment="false" x="37" y="114">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="0"/>
-                            <int id="2" val="9"/>
+                            <int id="2" val="7"/>
                         </setlayer2>
                         <play-sound-channel comment="false" x="37" y="146">
                             <int id="0" val="1"/>

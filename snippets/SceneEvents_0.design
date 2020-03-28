@@ -47,11 +47,11 @@
     </group>
     <group eventID="1" id="-1"/>
     <group eventID="2" id="0">
-        <event-periodic comment="false" x="87" y="29">
+        <event-periodic comment="false" x="21" y="51">
             <group eventID="2" id="-1">
-                <if comment="false" x="98" y="61">
+                <if comment="false" x="32" y="83">
                     <group eventID="2" id="-1">
-                        <set-game-att comment="false" x="109" y="86">
+                        <set-game-att comment="false" x="43" y="108">
                             <int id="0" val="totalSpawn"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-game-att comment="false" id="0" x="0" y="0">
@@ -60,12 +60,10 @@
                                 <int id="1" val="1"/>
                             </plus>
                         </set-game-att>
-                        <if comment="false" x="109" y="116">
+                        <if comment="false" x="43" y="138">
                             <group eventID="2" id="-1">
-                                <set-game-att comment="false" x="120" y="156">
-                                    <get-game-att comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="level"/>
-                                    </get-game-att>
+                                <set-game-att comment="false" x="54" y="178">
+                                    <int id="0" val="level"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <get-game-att comment="false" id="0" x="0" y="0">
                                             <int id="0" val="level"/>
@@ -94,26 +92,26 @@
                                 </less>
                             </and>
                         </if>
-                        <repeat comment="false" x="109" y="198">
+                        <repeat comment="false" x="43" y="220">
                             <group eventID="2" id="-1">
-                                <set-val-2-3 comment="false" x="120" y="223">
+                                <set-val-2-3 comment="false" x="54" y="245">
                                     <randint comment="false" id="0" x="0" y="0">
                                         <int id="0" val="0"/>
                                         <int id="1" val="3"/>
                                     </randint>
                                 </set-val-2-3>
-                                <if comment="false" x="120" y="248">
+                                <if comment="false" x="54" y="270">
                                     <group eventID="2" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="278">
+                                        <set-val-2-1 comment="false" x="65" y="300">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="303">
+                                        <set-val-2-2 comment="false" x="65" y="325">
                                             <int id="0" val="0"/>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="323">
+                                        <create-actor-on-layer comment="false" x="65" y="345">
                                             <actortype eid="33" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -126,18 +124,18 @@
                                         <int id="1" val="0"/>
                                     </eq>
                                 </if>
-                                <else-if comment="false" x="120" y="367">
+                                <else-if comment="false" x="54" y="389">
                                     <group eventID="2" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="397">
+                                        <set-val-2-1 comment="false" x="65" y="419">
                                             <int id="0" val="1080"/>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="417">
+                                        <set-val-2-2 comment="false" x="65" y="439">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="442">
+                                        <create-actor-on-layer comment="false" x="65" y="464">
                                             <actortype eid="33" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -150,18 +148,18 @@
                                         <int id="1" val="1"/>
                                     </eq>
                                 </else-if>
-                                <else-if comment="false" x="120" y="486">
+                                <else-if comment="false" x="54" y="508">
                                     <group eventID="2" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="516">
+                                        <set-val-2-1 comment="false" x="65" y="538">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="541">
+                                        <set-val-2-2 comment="false" x="65" y="563">
                                             <int id="0" val="1080"/>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="561">
+                                        <create-actor-on-layer comment="false" x="65" y="583">
                                             <actortype eid="33" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -174,18 +172,18 @@
                                         <int id="1" val="2"/>
                                     </eq>
                                 </else-if>
-                                <else-if comment="false" x="120" y="605">
+                                <else-if comment="false" x="54" y="627">
                                     <group eventID="2" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="635">
+                                        <set-val-2-1 comment="false" x="65" y="657">
                                             <int id="0" val="0"/>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="655">
+                                        <set-val-2-2 comment="false" x="65" y="677">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="680">
+                                        <create-actor-on-layer comment="false" x="65" y="702">
                                             <actortype eid="33" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -218,11 +216,11 @@
     </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
-        <event-periodic comment="false" x="87" y="29">
-            <group eventID="2" id="-1">
-                <if comment="false" x="98" y="61">
+        <event-periodic comment="false" x="10" y="33">
+            <group eventID="3" id="-1">
+                <if comment="false" x="21" y="65">
                     <group eventID="3" id="-1">
-                        <set-game-att comment="false" x="109" y="86">
+                        <set-game-att comment="false" x="32" y="90">
                             <int id="0" val="totalSpawn"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-game-att comment="false" id="0" x="0" y="0">
@@ -231,12 +229,10 @@
                                 <int id="1" val="1"/>
                             </plus>
                         </set-game-att>
-                        <if comment="false" x="109" y="116">
+                        <if comment="false" x="32" y="120">
                             <group eventID="3" id="-1">
-                                <set-game-att comment="false" x="120" y="156">
-                                    <get-game-att comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="level"/>
-                                    </get-game-att>
+                                <set-game-att comment="false" x="43" y="160">
+                                    <int id="0" val="level"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <get-game-att comment="false" id="0" x="0" y="0">
                                             <int id="0" val="level"/>
@@ -265,26 +261,26 @@
                                 </less>
                             </and>
                         </if>
-                        <repeat comment="false" x="109" y="198">
+                        <repeat comment="false" x="32" y="202">
                             <group eventID="3" id="-1">
-                                <set-val-2-3 comment="false" x="120" y="223">
+                                <set-val-2-3 comment="false" x="43" y="227">
                                     <randint comment="false" id="0" x="0" y="0">
                                         <int id="0" val="0"/>
                                         <int id="1" val="3"/>
                                     </randint>
                                 </set-val-2-3>
-                                <if comment="false" x="120" y="248">
+                                <if comment="false" x="43" y="252">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="278">
+                                        <set-val-2-1 comment="false" x="54" y="282">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="303">
+                                        <set-val-2-2 comment="false" x="54" y="307">
                                             <int id="0" val="0"/>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="323">
+                                        <create-actor-on-layer comment="false" x="54" y="327">
                                             <actortype eid="49" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -297,18 +293,18 @@
                                         <int id="1" val="0"/>
                                     </eq>
                                 </if>
-                                <else-if comment="false" x="120" y="367">
+                                <else-if comment="false" x="43" y="371">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="397">
+                                        <set-val-2-1 comment="false" x="54" y="401">
                                             <int id="0" val="1080"/>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="417">
+                                        <set-val-2-2 comment="false" x="54" y="421">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="442">
+                                        <create-actor-on-layer comment="false" x="54" y="446">
                                             <actortype eid="49" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -321,18 +317,18 @@
                                         <int id="1" val="1"/>
                                     </eq>
                                 </else-if>
-                                <else-if comment="false" x="120" y="486">
+                                <else-if comment="false" x="43" y="490">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="516">
+                                        <set-val-2-1 comment="false" x="54" y="520">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="541">
+                                        <set-val-2-2 comment="false" x="54" y="545">
                                             <int id="0" val="1080"/>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="561">
+                                        <create-actor-on-layer comment="false" x="54" y="565">
                                             <actortype eid="49" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -345,18 +341,18 @@
                                         <int id="1" val="2"/>
                                     </eq>
                                 </else-if>
-                                <else-if comment="false" x="120" y="605">
+                                <else-if comment="false" x="43" y="609">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-1 comment="false" x="131" y="635">
+                                        <set-val-2-1 comment="false" x="54" y="639">
                                             <int id="0" val="0"/>
                                         </set-val-2-1>
-                                        <set-val-2-2 comment="false" x="131" y="655">
+                                        <set-val-2-2 comment="false" x="54" y="659">
                                             <randint comment="false" id="0" x="0" y="0">
                                                 <int id="0" val="0"/>
                                                 <int id="1" val="1080"/>
                                             </randint>
                                         </set-val-2-2>
-                                        <create-actor-on-layer comment="false" x="131" y="680">
+                                        <create-actor-on-layer comment="false" x="54" y="684">
                                             <actortype eid="49" id="0"/>
                                             <get-val-2-1 comment="false" id="1" x="0" y="0"/>
                                             <get-val-2-2 comment="false" id="2" x="0" y="0"/>
@@ -405,17 +401,43 @@
     </group>
     <group eventID="4" id="-1"/>
     <group eventID="5" id="0">
-        <draw comment="false" x="15" y="15">
+        <step comment="false" x="1255" y="4">
+            <group eventID="5" id="-1"/>
+        </step>
+    </group>
+    <group eventID="5" id="1">
+        <if comment="false" x="68" y="127">
             <group eventID="5" id="-1">
-                <draw-text comment="false" x="26" y="40">
-                    <get-game-att comment="false" id="0" x="0" y="0">
-                        <int id="0" val="totalSpawn"/>
-                    </get-game-att>
-                    <int id="1" val="540"/>
-                    <int id="2" val="540"/>
-                </draw-text>
+                <set-game-att comment="false" x="79" y="167">
+                    <int id="0" val="level"/>
+                    <plus comment="false" id="1" x="0" y="0">
+                        <get-game-att comment="false" id="0" x="0" y="0">
+                            <int id="0" val="level"/>
+                        </get-game-att>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-att>
             </group>
-        </draw>
+            <and comment="false" id="0" x="0" y="0">
+                <eq comment="false" id="0" x="0" y="0">
+                    <mod comment="false" id="0" x="0" y="0">
+                        <get-game-att comment="false" id="0" x="0" y="0">
+                            <int id="0" val="totalSpawn"/>
+                        </get-game-att>
+                        <int id="1" val="30"/>
+                    </mod>
+                    <int id="1" val="0"/>
+                </eq>
+                <less comment="false" id="1" x="0" y="0">
+                    <get-game-att comment="false" id="0" x="0" y="0">
+                        <int id="0" val="level"/>
+                    </get-game-att>
+                    <get-game-att comment="false" id="1" x="0" y="0">
+                        <int id="0" val="maxLevel"/>
+                    </get-game-att>
+                </less>
+            </and>
+        </if>
     </group>
     <group eventID="5" id="-1"/>
 </groups>

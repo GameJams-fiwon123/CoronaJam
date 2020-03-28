@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <init comment="false" x="248" y="88">
+        <init comment="false" x="193" y="77">
             <group eventID="1" id="-1">
-                <if comment="false" x="259" y="113">
+                <if comment="false" x="204" y="102">
                     <group eventID="1" id="-1">
-                        <play-sound4 comment="false" x="270" y="143">
+                        <play-sound4 comment="false" x="215" y="132">
                             <int id="0" val="1"/>
                             <sound eid="48" id="1"/>
                         </play-sound4>
-                        <set-game-att comment="false" x="270" y="170">
+                        <set-game-att comment="false" x="215" y="159">
                             <int id="0" val="isTitlePlaying"/>
                             <true comment="false" id="1" x="0" y="0"/>
                         </set-game-att>
@@ -24,4 +24,28 @@
         </init>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="2" id="-1">
+                        <play-sound4 comment="false" x="37" y="70">
+                            <int id="0" val="1"/>
+                            <sound eid="48" id="1"/>
+                        </play-sound4>
+                        <set-game-att comment="false" x="37" y="97">
+                            <int id="0" val="isTitlePlaying"/>
+                            <true comment="false" id="1" x="0" y="0"/>
+                        </set-game-att>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-att comment="false" id="0" x="0" y="0">
+                            <int id="0" val="isTitlePlaying"/>
+                        </get-game-att>
+                    </not>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>
