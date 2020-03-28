@@ -63,11 +63,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class ActorEvents_1 extends ActorScript
 {
+	public var _indexRandom:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("indexRandom", "_indexRandom");
+		_indexRandom = 0;
 		
 	}
 	
@@ -102,9 +105,29 @@ class ActorEvents_1 extends ActorScript
 				}
 				else
 				{
+					_indexRandom = randomInt(1, 5);
 					recycleActor(event.otherActor);
 					setGameAttribute("savePersons", ((Engine.engine.getGameAttribute("savePersons") : Float) + 1));
-					playSound(getSound(61));
+					if((_indexRandom == 1))
+					{
+						playSound(getSound(61));
+					}
+					else if((_indexRandom == 2))
+					{
+						playSound(getSound(72));
+					}
+					else if((_indexRandom == 3))
+					{
+						playSound(getSound(73));
+					}
+					else if((_indexRandom == 4))
+					{
+						playSound(getSound(75));
+					}
+					else if((_indexRandom == 5))
+					{
+						playSound(getSound(74));
+					}
 				}
 			}
 		});

@@ -65,20 +65,82 @@
                 </if>
                 <else comment="false" x="51" y="317">
                     <group eventID="2" id="-1">
-                        <die comment="false" x="62" y="337">
+                        <set-val-1-1 comment="false" x="62" y="337">
+                            <randint comment="false" id="0" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <int id="1" val="5"/>
+                            </randint>
+                        </set-val-1-1>
+                        <die comment="false" x="62" y="362">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                         </die>
-                        <set-game-att comment="false" x="62" y="369">
+                        <set-game-att comment="false" x="62" y="394">
                             <int id="0" val="savePersons"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
                             </plus>
                         </set-game-att>
-                        <play-sound4 comment="false" x="62" y="399">
-                            <int id="0" val="0"/>
-                            <sound eid="61" id="1"/>
-                        </play-sound4>
+                        <if comment="false" x="62" y="424">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="73" y="454">
+                                    <int id="0" val="0"/>
+                                    <sound eid="61" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </eq>
+                        </if>
+                        <else-if comment="false" x="62" y="493">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="73" y="523">
+                                    <int id="0" val="0"/>
+                                    <sound eid="72" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="2"/>
+                            </eq>
+                        </else-if>
+                        <else-if comment="false" x="62" y="562">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="73" y="592">
+                                    <int id="0" val="0"/>
+                                    <sound eid="73" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="3"/>
+                            </eq>
+                        </else-if>
+                        <else-if comment="false" x="62" y="631">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="73" y="661">
+                                    <int id="0" val="0"/>
+                                    <sound eid="75" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="4"/>
+                            </eq>
+                        </else-if>
+                        <else-if comment="false" x="62" y="700">
+                            <group eventID="2" id="-1">
+                                <play-sound4 comment="false" x="73" y="730">
+                                    <int id="0" val="0"/>
+                                    <sound eid="74" id="1"/>
+                                </play-sound4>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="5"/>
+                            </eq>
+                        </else-if>
                     </group>
                 </else>
             </group>

@@ -74,6 +74,22 @@ class ActorEvents_4 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(((getGameAttribute("isUsingWater")) : Bool))
+				{
+					actor.setAnimation("Water");
+				}
+				else
+				{
+					actor.setAnimation("Jail");
+				}
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)
